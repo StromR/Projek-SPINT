@@ -4,14 +4,18 @@ body {
 
 .navbar{
     height: 88px;
+    background: #000;
 }
 
 .input-group{
     width: 430px;
     height: 40px;
-    top: 24px;
     background:#E9E7EC;
     margin-right: 32px;
+}
+
+.form-control{
+    background:#E9E7EC;
 }
 #navsearch{
     outline: none;

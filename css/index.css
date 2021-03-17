@@ -3,8 +3,6 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* Coba ngubah css */
-
 /* Navbar Section */
 .navbar{
     height: 88px;
@@ -68,3 +66,5 @@ body {
 .active{
     color: #A7424A;
 }
+
+/* Content */

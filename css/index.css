@@ -33,30 +33,33 @@ body {
 }
 
 /* Sidebar Section */
-#sidebar{
-    background-color: #211E2B;
+
+#sidebarright-wrapper{
     border-radius: 20px;
 }
 
-#sidebarleft{
-    background-color: #211E2B;
-    border-radius: 0px 10px 10px 0px;
-    height: 994px;
+
+.bg-dark{
+    background-color: #211E2B !important ;
+    color: #E9E7EC;
+}
+
+
+#sidebar-wrapper{
+    border-radius: 0px 20px 20px 0px;
+    font-weight: 600;
+    font-size: 28px;
+    width: 500px;
+}
+
+.list-group-item{
+    margin-bottom: 46px;
 }
 
 #pp{
     width: 106px;
     height: 106px;  
     border-radius: 50px;
-}
-
-#sidebarname{
-    color: #E9E7EC;
-}
-
-.navbar-nav{
-    font-weight: 600;
-    font-size: 36px;
 }
 
 .navbar-nav li{

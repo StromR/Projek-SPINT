@@ -40,6 +40,8 @@ body {
 
 #sidebarright-wrapper{
     border-radius: 20px;
+    width: 500px;
+    left: auto;
 }
 
 
@@ -86,16 +88,35 @@ margin: 40px 0px 40px 0px;}
     color: #A7424A;
 }
 
-/* navbar */
+/* menu */
 
-@media (min-width: 400px){
+.navbar{
+    height: 25px;
+}
+
+#menu{
+    width: 50%;
+}
+
+#menu-toggle{
+    background-color: #E9E7EC;
+    border: none;
+}
+
+@media (min-width: 450px){
 #menu-toggle{
    display: none;
 }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     #menu-toggle{
         display: block;
     }
   }
+
+  /*  */
+
+/* .container-fluid{
+    width: 900px;
+} */

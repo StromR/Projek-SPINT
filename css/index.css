@@ -34,7 +34,7 @@ body {
 
 /* Sidebar Section */
 
-#logo{
+#logo{  
     width: 100%;
 }
 
@@ -86,4 +86,16 @@ margin: 40px 0px 40px 0px;}
     color: #A7424A;
 }
 
-/* Content */
+/* navbar */
+
+@media (min-width: 400px){
+#menu-toggle{
+   display: none;
+}
+}
+
+@media (max-width: 400px) {
+    #menu-toggle{
+        display: block;
+    }
+  }

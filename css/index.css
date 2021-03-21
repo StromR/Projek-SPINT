@@ -35,14 +35,9 @@ body {
 /* Sidebar Section */
 
 #logo{  
-    width: 100%;
+    width: 50%;
 }
 
-#sidebarright-wrapper{
-    border-radius: 20px;
-    width: 500px;
-    left: auto;
-}
 
 
 .bg-dark{
@@ -50,13 +45,6 @@ body {
     color: #E9E7EC;
 }
 
-
-#sidebar-wrapper{
-    border-radius: 0px 20px 20px 0px;
-    font-weight: 600;
-    font-size: 28px;
-    width: 500px;
-}
 
 .list-group-item{
     margin-bottom: 40px;
@@ -71,17 +59,6 @@ body {
 #foto{
 margin: 40px 0px 40px 0px;}
 
-.navbar-nav li{
-    margin-bottom: 56px;
-}
-
-.nav-link{
-    color: #E9E7EC;
-}
-
-.nav-link:hover {
-    color: #A7424A;
-}
 
 
 .active{

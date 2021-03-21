@@ -4,25 +4,11 @@ body {
 }
 
 /* Navbar Section */
-.navbar{
-    height: 88px;
-}
-
 .input-group{
-    width: 430px;
-    height: 40px;
+    width: 280px;
+    margin-top: 24px;
     background:#E9E7EC;
-    margin-right: 32px;
 }
-
-.timeline-cover{
-    background: url("../assets/Linkedin\ Cover.png") no-repeat;
-    background-position: center;
-    background-size: cover;
-    min-height: 360px;
-    border-radius: 0 0 4px 4px;
-    position: relative;
-  }
 
 .input-group-append{
     border: none;
@@ -35,9 +21,9 @@ body {
 /* Sidebar Section */
 
 #logo{  
+    margin-top: 20px;
     width: 50%;
 }
-
 
 
 .bg-dark{
@@ -57,9 +43,8 @@ body {
 }
 
 #foto{
-margin: 40px 0px 40px 0px;}
-
-
+margin: 40px 0px 40px 0px;
+}
 
 .active{
     color: #A7424A;
@@ -80,20 +65,3 @@ margin: 40px 0px 40px 0px;}
     border: none;
 }
 
-@media (min-width: 450px){
-#menu-toggle{
-   display: none;
-}
-}
-
-@media (max-width: 450px) {
-    #menu-toggle{
-        display: block;
-    }
-  }
-
-  /*  */
-
-/* .container-fluid{
-    width: 900px;
-} */

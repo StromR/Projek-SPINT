@@ -29,8 +29,8 @@
   <div id="wrapper">
 
     <!-- Left Sidebar -->
-    <div class="bg-dark" id="left-sidebar-wrapper">
-      <div class="sidebar-heading text-center"><img src="assets/logo.png" alt="logo spint" id="logo"></div>
+    <div class="bg-dark rounded" id="left-sidebar-wrapper">
+      <div class="sidebar-brand text-center"><img src="assets/logo.png" alt="logo spint" id="logo"></div>
       <div class="text-center">
         <a href="Profile.html"><img src="assets/img/rkpp.png" alt="profile picture" class="" id="foto"></a>
       </div>
@@ -46,21 +46,19 @@
     <!-- /#left-sidebar-wrapper -->
 
     <!-- Right Sidebar -->
-    <div class="bg-dark rounded" id="right-sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="#">Right Sidebar</a>
-            </li>
+    <div class="rounded text-left" id="right-sidebar-wrapper">
+      <div class="input-group rounded text-left align-items-lg-start">
+        <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <span class="input-group-text amber lighten-3" id="basic-text1"><i class="" aria-hidden="true"><img src="assets/icon/search.png"></i></span>
+        </div>
+      </div>
 
-            <li>
-                <a data-toggle="collapse" href="#recent-search" aria-expanded="false">Recent Search <span class="caret"></span></a>
-                <div class="collapse in sub-bar" id="recent-search">
-                    <a href="#">Keyword 1</a>
-                    <a href="#">Keyword 2</a>
-                    <a href="#">Keyword 3</a>
-                    <a href="#">Keyword 4</a>
-                </div>
-            </li>
+      <!-- Tournament -->
+      <div class="card-body rounded bg-white" id="tournament">
+
+      </div>
+    </div>
     </div>
     <!-- /#right-sidebar-wrapper -->
 
@@ -71,8 +69,8 @@
             <div class="row">
                 <div class="col-lg-12">
                   <nav class="navbar navbar-expand-lg">
-                    <button class="btn btn-primary" id="left-menu-toggle"><img src="assets/icon/menu.png" alt="logo spint" id="menu"></button>
-                    <button class="btn btn-primary" id="right-menu-toggle"><img src="assets/icon/menu.png" alt="logo spint" id="menu"></button>
+                    <button class="btn btn-primary" id="left-menu-toggle"></button>
+                    <button class="btn btn-primary" id="right-menu-toggle"></button>
                   </nav>
             
                   <div class="container text-center">
@@ -111,6 +109,10 @@
     $("#left-menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("left-toggled");
+    });
+    $("#right-menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("right-toggled");
     });
   </script>
 </body>

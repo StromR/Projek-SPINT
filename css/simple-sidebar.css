@@ -131,7 +131,7 @@
 
   #page-content-wrapper {
       padding: 50px;
-      position: relative;
+      position: relative !important;
   }
 
   #wrapper.left-toggled #page-content-wrapper {

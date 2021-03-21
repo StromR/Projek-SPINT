@@ -26,24 +26,27 @@
 </head>
 
 <body>
+  <!-- Wrapper -->
   <div id="wrapper">
 
     <!-- Left Sidebar -->
     <div class="bg-dark rounded" id="left-sidebar-wrapper">
-      <div class="sidebar-brand text-center"><img src="assets/logo.png" alt="logo spint" id="logo"></div>
+      <div class="sidebar-brand text-center">
+        <img src="assets/logo.png" alt="logo spint" id="logo">
+      </div>
       <div class="text-center">
         <a href="Profile.html"><img src="assets/img/rkpp.png" alt="profile picture" class="" id="foto"></a>
       </div>
-      <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-dark"><img src="assets/icon/grid-active.png" alt="home"> Home</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark"><img src="assets/icon/chat.png" alt="chat"> Chat</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark"><img src="assets/icon/party.png" alt="party"> Party</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark"><img src="assets/icon/bell.png" alt="notification"> Notification</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark"><img src="assets/icon/calendar.png" alt="calendar"> Calendar</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark"><img src="assets/icon/setting.png" alt="setting"> Setting</a>
+      <div class="list-group" id="sidebar">
+        <a href="#" class="list-group-item list-group-item-action bg-dark"><img src="assets/icon/grid-active.png" alt="home" class="mx-auto"> Home</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark"><img src="assets/icon/chat.png" alt="chat" class="mx-auto"> Chat</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark"><img src="assets/icon/party.png" alt="party" class="mx-auto"> Party</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark"><img src="assets/icon/bell.png" alt="notification" class="mx-auto"> Notification</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark"><img src="assets/icon/calendar.png" alt="calendar" class="mx-auto"> Calendar</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark"><img src="assets/icon/setting.png" alt="setting" class="mx-auto"> Setting</a>
       </div>
     </div>
-    <!-- /#left-sidebar-wrapper -->
+    <!-- End Left Sidebar -->
 
     <!-- Right Sidebar -->
     <div class="rounded text-left" id="right-sidebar-wrapper">
@@ -55,50 +58,65 @@
       </div>
 
       <!-- Tournament -->
-      <div class="card-body rounded bg-white" id="tournament">
+      <div class="card-body rounded" id="tournament">
+        <h4 class="text-center">Tournament</h4>
+        <ul class="list-group">
+          <li class="list-group-item" id="list-tour"><img src="assets/icon/dota.png" alt="dota" class="w-25 mx-1"> The International</li>
+          <li class="list-group-item" id="list-tour"><img src="assets/icon/csgo.png" alt="cssgo" class="w-25 mx-1"> CSGO Major</li>
+          <li class="list-group-item" id="list-tour"><img src="assets/icon/ml.png" alt="ml" class="w-25 mx-1"> M2</li>
+        </ul>        
+      </div>
 
+      <!-- Transfer -->
+      <div class="card-body rounded" id="transfer">
+        <h4 class="text-center">Transfer</h4>
+        <ul class="list-group">
+          <li class="list-group-item" id="list-tour"><img src="assets/trf-1.png" alt="ml" class="w-100 mx-1"></li>
+          <li class="list-group-item" id="list-tour"><img src="assets/trf-2.png" alt="csgo" class="w-100 mx-1"></li>
+          <li class="list-group-item" id="list-tour"><img src="assets/trf-3.png" alt="dota" class="w-100 mx-1"></li>
+        </ul>        
       </div>
     </div>
-    </div>
-    <!-- /#right-sidebar-wrapper -->
+    
+    <!-- End Right Sidebar -->
 
     
     <!-- Page Content -->
     <div id="page-content-wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                  <nav class="navbar navbar-expand-lg">
-                    <button class="btn btn-primary" id="left-menu-toggle"></button>
-                    <button class="btn btn-primary" id="right-menu-toggle"></button>
-                  </nav>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg">
+              <button class="btn btn-primary" id="left-menu-toggle"></button>
+              <button class="btn btn-primary" id="right-menu-toggle"></button>
+            </nav>
             
-                  <div class="container text-center">
-                    <div class="row">
-                         <div class="col-sm">
-                           <img src="assets/img/Game Item1.png" alt="dota">
-                         </div>
-                         <div class="col-sm">
-                           <img src="assets/img/Game Item2.png" alt="csgo">
-                         </div>
-                         <div class="col-sm">
-                           <img src="assets/img/Game Item3.png" alt="ml">
-                         </div>
-                    </div>
-                  </div>
+            <div class="container text-center">
+              <div class="row">
+                <div class="col-sm">
+                  <img src="assets/img/Game Item1.png" alt="dota">
                 </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12">
+                <div class="col-sm">
+                  <img src="assets/img/Game Item2.png" alt="csgo">
+                </div>
+                <div class="col-sm">
+                  <img src="assets/img/Game Item3.png" alt="ml">
+                </div>            
               </div>
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-lg-12">
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- /#page-content-wrapper -->
+  </div>
+  <!-- End Page Content -->
 
 </div>
-<!-- /#wrapper -->
+<!-- End Wrapper -->
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

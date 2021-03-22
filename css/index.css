@@ -37,6 +37,12 @@ body {
     border: none;
 }
 
+.list-group-item:hover{
+    color: #A7424A;
+    background-color: none !important;
+    
+}
+
 #foto{
     width: 130px;
     height: 130px;  
@@ -117,11 +123,11 @@ margin: 40px 0px 40px 0px;
 }
 
 #write-footer{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
 
 #caption{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
 }

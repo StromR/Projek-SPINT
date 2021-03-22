@@ -34,6 +34,7 @@ body {
 
 .list-group-item{
     margin-bottom: 40px;
+    border: none;
 }
 
 #foto{
@@ -53,7 +54,8 @@ margin: 40px 0px 40px 0px;
     font-size: 34px;
 }
 .active{
-    color: #A7424A;
+    color: #A7424A !important;
+    border: none;
 }
 
 /* menu */
@@ -98,4 +100,28 @@ margin: 40px 0px 40px 0px;
     color: #E9E7EC;
     font-weight: 600;
     font-size: 18px;
+}
+
+#textarea-write{
+    font-weight: 600;
+    font-size: 30px;
+    color: #E9E7EC !important;
+    border-bottom: 4px solid #E9E7EC ;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.btn-link{
+    color: #A7424A !important;
+}
+
+#write-footer{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#caption{
+    font-size: 20px;
+    font-weight: 600;
 }

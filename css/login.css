@@ -5,7 +5,7 @@ body {
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    
 }
 
 /* Text Align */
@@ -160,11 +160,18 @@ body {
 /* Backgrounds */
 
 .main-bg {
-
-    background: #15131E;
+    background: url(../assets/Login-BG-SPINT.png) no-repeat;
+    display: block;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
     font-size: 24px;
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Login & Register Pages*/
@@ -180,11 +187,4 @@ body {
 }
 .wrapper.login-container {
     margin-top: 140px;
-}
-.logo-badge {
-    color: #e6e6e6;
-    font-size: 80px;
-    font-weight: 800;
-    letter-spacing: -10px;
-    margin-bottom: 0;
 }

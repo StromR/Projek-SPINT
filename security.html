@@ -25,7 +25,7 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container-fluid">
-          <a href="index.html" class="navbar-brand"><img src="assets/logo.png" alt="logo spint"></a>
+          <a href="index.html"class="navbar-brand"><img src="assets/logo.png" alt="logo spint"></a>
                 <div class="input-group rounded" >
                   <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search">
                   <div class="input-group-append">
@@ -44,6 +44,7 @@
         <aside class="col-12 col-md-3 col-xl-2 p-0 flex-shrink-1 rounded sticky-top" id="sidebarleft">
           <nav class="navbar navbar-expand-md flex-md-column flex-row
            py-2 sticky-top rounded" id="sidebar">
+
             <button type="button" class="navbar-toggler border-0 order-1" data-toggle="collapse" data-target="#nav" aria-controls="nav"
             aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -51,13 +52,13 @@
             <div class="collapse navbar-collapse proder-last" id="nav">
               <ul class="navbar-nav flex-column w-100 justify-content-center">
                 <li>
-                  <a href="setting.html" class="nav-link active"><img src="assets/icon/profile.png" height="50px" width="50px" alt="profile"> Profile Information</a>
+                  <a href="setting.html" class="nav-link"><img src="assets/icon/profile.png" height="50px" width="50px" alt="profile"> Profile Information</a>
                 </li>
                 <li>
                   <a href="account seting.html" class="nav-link"><img src="assets/icon/seting.png" height="50px" width="50px" alt="chat"> Account Setting</a>
                 </li>
                 <li>
-                  <a href="security.html" class="nav-link"><img src="assets/icon/security.png" height="50px" width="50px" alt="security"> Security</a>
+                  <a href="security.html" class="nav-link active"><img src="assets/icon/security.png" height="50px" width="50px" alt="security"> Security</a>
                 </li>
                 <li>
                   <a href="notif.html" class="nav-link"><img src="assets/icon/bell.png" height="50px" width="50px" alt="notification"> Notification</a>
@@ -76,30 +77,16 @@
            <div class="row align-items-center">
              <div class="col-sm-auto" style="color: white;">
               <div class="container">
-              <h1>Your Profile Information</h1>
+              <h1>Security Settings</h1>
              </div>
-             <div class="form-group" style="color: white;">
-               <label for="fullname">Full Name</label>
-               <input type="text" class="form-control" id="fullName" value="Ridwan Kamil">
-             </div>
-             <div class="form-group" style="color: white;">
-              <label for="nick">Nick Name</label>
-              <input type="text" class="form-control" id="fullName" value="Ridz">
-            </div>
-             <div class="form-group" style="color: white;">
-              <label for="bio">Bio</label>
-              <input type="text" class="form-control" id="bio" value="your bio in here">
-            </div>
-            <div class="form-group" style="color: white;">
-              <label for="Loc">Location</label>
-              <input type="text" class="form-control" id="Loc" value="Bandung, Jawa Barat, Indonesia">
-            </div>
+             <div class="form-group">
+                <label class="d-block">Change Password</label>
+                <input type="text" class="form-control" placeholder="Enter your old password">
+                <input type="text" class="form-control mt-1" placeholder="New password">
+                <input type="text" class="form-control mt-1" placeholder="Confirm new password">
+              </div>
+              <button class="btn btn-primary" type="button">Update</button>
           </div>
-          <hr>
-            <div class="container">
-            <button type="button" class="btn btn-primary">Update Profile</button>
-            <button type="reset" class="btn btn-light">Reset Changes</button>
-            </div>
            </div>
           </div>
           </div>

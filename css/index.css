@@ -126,8 +126,7 @@ margin: 40px 0px 40px 0px;
 }
 
 .btn:hover{
-    color: #A7424A;
-    background-color: aqua;
+    color: #A7424A !important;
 }
 
 #write-footer{

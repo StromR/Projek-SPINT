@@ -131,3 +131,31 @@ margin: 40px 0px 40px 0px;
     font-size: 24px;
     font-weight: 600;
 }
+
+/* Scroollll */
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: transparent; 
+    border:0px ;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #A7424A; 
+    border:0px solid #eee;
+    height:100px;
+    border-radius:5px;
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+    background: #9e2c36; 
+}
+
+html {
+    scroll-behavior: smooth;
+}

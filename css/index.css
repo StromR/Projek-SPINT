@@ -40,11 +40,15 @@ body {
     width: auto;    
 }
 
-
 .list-group-item:hover{
     color: #A7424A;
     background-color: none !important;
     text-decoration: none;
+}
+
+#iconbarleft svg:hover path{
+    fill: #A7424A !important;
+    stroke:#A7424A !important;
 }
 
 #iconbarleft:hover{

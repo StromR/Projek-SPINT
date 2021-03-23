@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-   <!-- Link Bootstrap CSS -->
+    <!-- Link Bootstrap CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     
@@ -45,6 +45,7 @@
         <aside class="col-12 col-md-3 col-xl-2 p-0 flex-shrink-1 rounded sticky-top" id="sidebarleft">
           <nav class="navbar navbar-expand-md flex-md-column flex-row
            py-2 sticky-top rounded" id="sidebar">
+
             <button type="button" class="navbar-toggler border-0 order-1" data-toggle="collapse" data-target="#nav" aria-controls="nav"
             aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -52,16 +53,16 @@
             <div class="collapse navbar-collapse proder-last" id="nav">
               <ul class="navbar-nav flex-column w-100 justify-content-center">
                 <li>
-                  <a href="setting.html" class="nav-link active"><img src="assets/icon/profile.svg" height="50px" width="50px" alt="profile"> Profile Information</a>
+                  <a href="setting.html" class="nav-link"><img src="assets/icon/profile.svg" height="50px" width="50px" alt="profile"> Profile Information</a>
                 </li>
                 <li>
                   <a href="account seting.html" class="nav-link"><img src="assets/icon/setting.svg" height="50px" width="50px" alt="setting"> Account Setting</a>
                 </li>
                 <li>
-                  <a href="security.html" class="nav-link"><img src="assets/icon/security.svg" height="50px" width="50px" alt="security"> Security</a>
+                  <a href="security.html" class="nav-link "><img src="assets/icon/security.svg" height="50px" width="50px" alt="security"> Security</a>
                 </li>
                 <li>
-                  <a href="notif.html" class="nav-link"><img src="assets/icon/notif.svg" height="50px" width="50px" alt="notification"> Notification</a>
+                  <a href="notif.html" class="nav-link active"><img src="assets/icon/notif.svg" height="50px" width="50px" alt="notification"> Notification</a>
                 </li>
               </ul>
             </div>
@@ -71,41 +72,57 @@
          
 
          <!-- Content -->
-         <div class="col px-0 flex mx-md-5">
+         <main class="col px-0 flex mx-md-5">
           <div class="card-body tab-content">
           <div class="tab-pane active" id="profile">
            <div class="row align-items-center">
              <div class="col-sm-auto" style="color: white;">
               <div class="container">
-              <h1>Your Profile Information</h1>
-             </div>
-             <div class="form-group" style="color: white;">
-               <label for="fullname">Full Name</label>
-               <input type="text" class="form-control" id="fullName" value="Ridwan Kamil">
-             </div>
-             <div class="form-group" style="color: white;">
-              <label for="nick">Nick Name</label>
-              <input type="text" class="form-control" id="fullName" value="Ridz">
-            </div>
-             <div class="form-group" style="color: white;">
-              <label for="bio">Bio</label>
-              <input type="text" class="form-control" id="bio" value="your bio in here">
-            </div>
-            <div class="form-group" style="color: white;">
-              <label for="Loc">Location</label>
-              <input type="text" class="form-control" id="Loc" value="Bandung, Jawa Barat, Indonesia">
-            </div>
-          </div>
-          <hr>
-            <div class="container">
-            <button type="button" class="btn btn-primary">Update Profile</button>
-            <button type="reset" class="btn btn-light">Reset Changes</button>
-            </div>
+              <h1>Notification Settings</h1>
+              <div class="form-group">
+                <label class="d-block">SPINT Notifications</label>
+                <ul class="list-group list-group-sm">
+                  <li class="list-group-item has-icon" style="color: #15131E;">
+                    Comments
+                    <div class="custom-control custom-control-nolabel custom-switch ml-auto">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+                      <label class="custom-control-label" for="customSwitch1"></label>
+                    </div>
+                  </li>
+                  <li class="list-group-item has-icon" style="color: #15131E;">
+                    Updates From People
+                    <div class="custom-control custom-control-nolabel custom-switch ml-auto">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                      <label class="custom-control-label" for="customSwitch2"></label>
+                    </div>
+                  </li>
+                  <li class="list-group-item has-icon" style="color: #15131E;">
+                    Reminders
+                    <div class="custom-control custom-control-nolabel custom-switch ml-auto">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch3" checked="">
+                      <label class="custom-control-label" for="customSwitch3"></label>
+                    </div>
+                  </li>
+                  <li class="list-group-item has-icon" style="color: #15131E;">
+                    Events
+                    <div class="custom-control custom-control-nolabel custom-switch ml-auto">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch4" checked="">
+                      <label class="custom-control-label" for="customSwitch4"></label>
+                    </div>
+                  </li>
+                  <li class="list-group-item has-icon" style="color: #15131E;">
+                    Pages You Follow
+                    <div class="custom-control custom-control-nolabel custom-switch ml-auto">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                      <label class="custom-control-label" for="customSwitch5"></label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
            </div>
           </div>
           </div>
          <!-- End of Content -->
-        </div>
         </div>
     </div>
    
@@ -118,7 +135,7 @@
    
    
     <!-- Link Bootstrap JS -->
-    <!-- Bootstrap core JavaScript -->
+     <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>

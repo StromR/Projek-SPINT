@@ -44,6 +44,12 @@ body {
 .list-group-item:hover{
     color: #A7424A;
     background-color: none !important;
+    text-decoration: none;
+}
+
+#iconbarleft:hover{
+    color: #A7424A;
+    background: none !important;
 }
 
 #foto{
@@ -62,6 +68,7 @@ margin: 40px 0px 40px 0px;
     font-weight: 550;
     font-size: 25px;
 }
+
 .active{
     color: #A7424A !important;
     border: none;
@@ -125,8 +132,9 @@ margin: 40px 0px 40px 0px;
     border-right: none;
 }
 
-.btn:hover{
+#write-footer:hover{
     color: #A7424A !important;
+    background: none !important;
 }
 
 #write-footer{

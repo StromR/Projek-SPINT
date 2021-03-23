@@ -36,6 +36,10 @@ body {
     margin-bottom: 40px;
     border: none;
 }
+.list-group-item-action{
+    width: auto;    
+}
+
 
 .list-group-item:hover{
     color: #A7424A;
@@ -107,6 +111,10 @@ margin: 40px 0px 40px 0px;
     font-size: 18px;
 }
 
+
+
+
+/* Main Content Write and Post */
 #textarea-write{
     font-weight: 600;
     font-size: 30px;
@@ -117,8 +125,9 @@ margin: 40px 0px 40px 0px;
     border-right: none;
 }
 
-.btn-link{
-    color: #A7424A !important;
+.btn:hover{
+    color: #A7424A;
+    background-color: aqua;
 }
 
 #write-footer{
@@ -158,6 +167,7 @@ margin: 40px 0px 40px 0px;
 html {
     scroll-behavior: smooth;
 }
+
 
 /* Loader */
 .loader-wrapper{

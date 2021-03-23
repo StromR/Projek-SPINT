@@ -8,30 +8,6 @@ body {
     height: 88px;
 }
 
-.input-group{
-    width: 430px;
-    height: 40px;
-    background:#E9E7EC;
-    margin-right: 32px;
-}
-
-.timeline-cover{
-    background: url("../assets/Linkedin\ Cover.png") no-repeat;
-    background-position: center;
-    background-size: cover;
-    min-height: 360px;
-    border-radius: 0 0 4px 4px;
-    position: relative;
-  }
-
-.input-group-append{
-    border: none;
-}
-
-.form-control{
-    background:#E9E7EC;
-}
-
 /* Sidebar Section */
 #sidebar{
     background-color: #211E2B;
@@ -76,4 +52,3 @@ body {
     color: #A7424A;
 }
 
-/* Content */

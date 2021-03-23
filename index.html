@@ -218,7 +218,7 @@
                   </div>
                   <div class="col">
                     <button type="button" class="btn btn-fbook btn-block btn-sm bg-dark mx-1" id="write-footer"><img
-                        src="../assets/icon/comment.svg" alt=""> Comment 100</button>
+                        src="../assets/icon/comment.svg" alt=""> Comment</button>
                   </div>
                   <div class="col">
                     <button type="button" class="btn btn-fbook btn-block btn-sm bg-dark mx-1" id="write-footer"><img
@@ -338,6 +338,13 @@
         $('#imagemodal').modal('show');
       });
     });
+    $(function () {
+     $("#like").click(function () {
+         var input = $(this).find('.qty1');
+         input.val(parseInt(input.val())+ 1);
+     });
+});                                        
+
   </script>
 
 </body>

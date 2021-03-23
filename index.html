@@ -107,7 +107,7 @@
           </div>
         </div>
 
-        <!-- Write Post -->
+        <!-- Post -->
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="card my-5 bg-dark ">
@@ -140,6 +140,71 @@
                   </div>
               </div>
             </div>
+
+            <!-- Item -->
+            <div class="card my-3 bg-dark">
+              <div class="card-header bg-dark border-0 py-2">
+                  <div class="d-flex justify-content-between">
+                      <div class="d-flex justify-content-between">
+                          <a href="#">
+                              <img class="rounded" src="https://picsum.photos/80/80/?random" width="45" alt="" />
+                          </a>
+                          <div class="ml-3">
+                              <div class="h6 m-0">
+                                  <a href="#" class="bg-dark">23Savage</a>
+                              </div>
+                              <div class="text-muted h8 bg-dark">2 minutes ago</div>
+                          </div>
+                      </div>
+                      <div class="dropdown">
+                          <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton"
+                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> </button>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card-body pt-0 pb-2" id="caption ">
+                Hello. So today im doing 100 code days. But i fail on day 1 because i want to play ranked on DOTA......  
+              </div>
+              <a href="#" class="pop">  
+                <img class="card-img-top rounded-0" src="assets/img/post.png" alt="post">
+              </a>
+              <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" data-dismiss="modal">
+                  <div class="modal-content bg-dark w"  >              
+                    <div class="modal-body" >
+                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <img src="" class="imagepreview" style="width: 100%;" >
+                    </div> 
+                    <div class="modal-footer">
+                        <div class="col-xs-12">
+                             <p class="text-left"> Hello. So today im doing 100 code days. But i fail on day 1 because i want to play ranked on DOTA and i'm not worried abou my college. I LOVE DOTA</p>
+                        </div>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer bg-dark border-0 p-2">
+                  <div class="d-flex justify-content-between align-items-sm-start my-1">
+                      <div class="col bg-dark">
+                          <button type="button" class="btn btn-fbook btn-block btn-sm bg-dark mx-1" id="write-footer"><img src="../assets/icon/like-active.svg" alt=""> Like 100</button>
+                      </div>
+                      <div class="col">
+                          <button type="button" class="btn btn-fbook btn-block btn-sm bg-dark mx-1" id="write-footer"><img src="../assets/icon/comment.svg" alt=""> Comment 100</button>
+                      </div>
+                      <div class="col">
+                          <button type="button" class="btn btn-fbook btn-block btn-sm bg-dark mx-1" id="write-footer"><img src="../assets/icon/share.svg" alt=""> Share</button>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <!-- End Item -->
 
             <!-- ITEM -->
             <div class="card my-3 bg-dark">
@@ -204,17 +269,18 @@
                   </div>
               </div>
           </div>
+          <!-- End Item -->
+          
           </div>
         </div>
-
-        <!--  -->
+        <!-- End Post -->
+       
       </div>
     </div>
+    <!-- End Page Content -->
   </div>
-  <!-- End Page Content -->
+  <!-- End Wrapper -->
 
-</div>
-<!-- End Wrapper -->
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -237,5 +303,6 @@
 		  });		
     }); 
   </script>
+
 </body>
 </html>

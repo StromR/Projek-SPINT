@@ -8,6 +8,21 @@ body {
     height: 88px;
 }
 
+.input-group{
+    width: 430px;
+    height: 40px;
+    background:#E9E7EC;
+    margin-right: 32px;
+}
+
+.input-group-append{
+    border: none;
+}
+
+.form-control{
+    background:#E9E7EC;
+}
+
 /* Sidebar Section */
 #sidebar{
     background-color: #211E2B;
@@ -52,3 +67,4 @@ body {
     color: #A7424A;
 }
 
+/* Content */

@@ -135,6 +135,7 @@
                         <label class="sr-only" for="textarea-write">Text Area</label>
                         <textarea class="form-control bg-dark" id="textarea-write" rows="2"
                           placeholder="Write here"></textarea>
+                          <input type="button" value="Post" id="post" onclick="addText"/>
                       </div>
                     </form>
                   </div>
@@ -158,6 +159,8 @@
               </div>
             </div>
 
+            <div class="col-12 bg-dark" id="text">
+            </div>
             <!-- Item -->
             <div class="card my-3 bg-dark">
               <div class="card-header bg-dark border-0 py-2">
@@ -337,7 +340,10 @@
         $('.imagepreview').attr('src', $(this).find('img').attr('src'));
         $('#imagemodal').modal('show');
       });
-    });                         
+    });    
+    $('#post').click(function() {
+    $('#text').html($('#textarea-write').val());
+});                  
   </script>
 
 </body>

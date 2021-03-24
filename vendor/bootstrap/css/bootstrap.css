@@ -3772,8 +3772,8 @@ input[type="button"].btn-block {
 
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
-  border-color: #007bff;
-  background-color: #007bff;
+  border-color: #A7424A;
+  background-color: #A7424A;
 }
 
 .custom-control-input:focus ~ .custom-control-label::before {
@@ -3837,8 +3837,8 @@ input[type="button"].btn-block {
 }
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
-  border-color: #007bff;
-  background-color: #007bff;
+  border-color: #A7424A;
+  background-color: #A7424A;
 }
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {

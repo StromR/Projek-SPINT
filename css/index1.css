@@ -69,4 +69,22 @@ body {
     color: #A7424A;
 }
 
-/* Content */
+/* Form */
+.form-group{
+    color: #E9E7EC;
+}
+
+.form-control{
+    background-color: #E9E7EC;
+}
+
+/* Button */
+#update{
+    background-color: #A7424A;
+    border: none;
+}
+
+#reset{
+    background-color: #E9E7EC;
+    border: none;
+}

@@ -26,9 +26,6 @@ body {
 .text-whitesmoke {
     color: #E9E7EC
 }
-.text-darkyellow {
-    color: #A7424A
-}
 
 /* Lines */
 
@@ -144,6 +141,10 @@ body {
     box-shadow: none;
 }
 .form-control::-webkit-input-placeholder { color: #BDBDBD; }
+.form-control{
+    color: #E9E7EC !important;
+    background-color: #202020 !important;
+}
 
 /* Container */
 
@@ -165,13 +166,8 @@ body {
 .main-bg {
     background: url(../assets/Login-BG-SPINT.png);
       /* Set a specific height */
-  min-height: 500px;
+    min-height: 500px;
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
     display: block;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;

@@ -126,6 +126,32 @@ margin: 40px 0px 40px 0px;
 
 
 /* Main Content Write and Post */
+.inputimage{
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+}
+
+.inputimage + label {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+}
+
+.inputimage:focus + label,
+.inputimage + label:hover {
+    background-color: none;
+}
+
+.inputimage + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+
 #textarea-write{
     font-weight: 600;
     font-size: 30px;

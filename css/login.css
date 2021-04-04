@@ -215,16 +215,7 @@ body {
     background: #0f1923;
     color: #ece8e1;
   }
-  div a:after, div a:before {
-    content: "";
-    width: 1px;
-    position: absolute;
-    height: 8px;
-    background: #0f1923;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+
   div a:before {
     right: 0;
     left: initial;

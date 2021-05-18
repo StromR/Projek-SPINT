@@ -139,7 +139,7 @@ if($years==1)
         <p class="bg-dark"><?php echo $firstname ?></p>
       </div>
       <div class="list-group" id="sidebar">
-        <a href="index.php" class="list-group-item active bg-dark mx-sm-2" id="iconbarleft"><img
+        <a href="home.php" class="list-group-item active bg-dark mx-sm-2" id="iconbarleft"><img
             src="assets/icon/home-active.svg" alt="home" class="mx-auto"> Home</a>
         <a href="#" class="list-group-item bg-dark mx-sm-2" id="iconbarleft"><img src="assets/icon/chat.svg"
             alt="chat" class="mx-auto iconhome"> Chat</a>

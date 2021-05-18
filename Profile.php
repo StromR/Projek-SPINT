@@ -29,32 +29,38 @@
 </head>
 
 <body>
+<?php include ('session.php');?>
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
   <!-- Left Sidebar -->
   <div class="bg-dark rounded" id="left-sidebar-wrapper">
     <div class="sidebar-brand text-center">
-      <img src="../assets/logo.svg" alt="logo spint" id="logo">
+      <img src="assets/logo.svg" alt="logo spint" id="logo">
     </div>
     <div class="text-center">
-      <a href="Profile.html"><img src="assets/img/rkpp.png" alt="profile picture" class="" id="foto"></a>
+      <a href="updatephoto.php"><img src="<?php echo $row['profile_picture'] ?>" alt="profile picture" class="" id="foto"></a>
+      <p class="bg-dark"><?php echo $firstname ?></p>
     </div>
     <div class="list-group" id="sidebar">
-      <a href="index.html" class="list-group-item list-group-item-action bg-dark mx-sm-2"><img
-          src="../assets/icon/home.svg" alt="home" class="mx-auto"> Home</a>
-      <a href="#" class="list-group-item list-group-item-action bg-dark mx-sm-2"><img src="../assets/icon/chat.svg"
+      <a href="home.php" class="list-group-item list-group-item-action bg-dark mx-sm-2"><img
+          src="assets/icon/home.svg" alt="home" class="mx-auto"> Home</a>
+      <a href="#" class="list-group-item list-group-item-action bg-dark mx-sm-2"><img src="assets/icon/chat.svg"
           alt="chat" class="mx-auto"> Chat</a>
-      <a href="#" class="list-group-item list-group-item-action bg-dark mx-sm-2"><img src="../assets/icon/party.svg"
+      <a href="#" class="list-group-item list-group-item-action bg-dark mx-sm-2"><img src="assets/icon/party.svg"
           alt="party" class="mx-auto"> Party</a>
-      <a href="#" class="list-group-item list-group-item-action bg-dark mx-sm-2"><img src="../assets/icon/notif.svg"
+      <a href="#" class="list-group-item list-group-item-action bg-dark mx-sm-2"><img src="assets/icon/notif.svg"
           alt="notification" class="mx-auto"> Notification</a>
-      <a href="Profile.html" class="list-group-item list-group-item-action active bg-dark mx-sm-2">&nbsp;<img
-          src="../assets/icon/profile-active.svg" alt="profile" class="mx-auto">&nbsp;&nbsp; Profile</a>
-      <a href="setting.html" class="list-group-item list-group-item-action bg-dark mx-sm-2"><img
-          src="../assets/icon/setting.svg" alt="setting" class="mx-auto"> Setting</a>
+      <a href="Profile.php" class="list-group-item list-group-item-action active bg-dark mx-sm-2">&nbsp;<img
+          src="assets/icon/profile-active.svg" alt="profile" class="mx-auto">&nbsp;&nbsp; Profile</a>
+      <a href="setting.php" class="list-group-item list-group-item-action bg-dark mx-sm-2"><img
+          src="assets/icon/setting.svg" alt="setting" class="mx-auto"> Setting</a>
     </div>
   </div>
   <!-- End Left Sidebar -->
   <!-- Navbar -->
-  <nav class="navbar">
+  <!-- <nav class="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><img src="assets/logo.svg" alt="logo spint" id="logo"></a>
       <div class="input-group rounded">
@@ -65,21 +71,20 @@
         </div>
       </div>
     </div>
-  </nav>
+  </nav> -->
   <!-- End of Navbar -->
 
   <div class="container">
     <div class="main-body">
-
       <div class="row gutters-sm">
         <div class="col-md-4 mb-3">
           <div class="card">
             <div class="card-body">
-              <div class="d-flex flex-column align-items-center text-center">
-                <img src="assets/img/rkpp.png" alt="Admin" width="150">
+              <div class="d-flex flex-column align-items-center text-center rounded">
+                <img src="<?php echo $row['profile_picture'] ?>" alt="Admin" width="100">
                 <div class="mt-3">
-                  <h4 id="wartek">Ridwan Kamil</h4>
-                  <p class="text-secondary mb-1">Pejabat</p>
+                  <h4 id="wartek"><?php echo $firstname." ".$lastname ?></h4>
+                  <p class="text-secondary mb-1"><?php echo $username ?></p>
                   <p class="text-muted font-size-sm">Mantan Pro Player</p>
                   <button class="btn btn-outline-primary">Recruit</button>
                   <button class="btn btn-outline-secondary">Message</button>
@@ -131,7 +136,11 @@
           </div>
         </div>
 
-        <div class="col-md-8">
+
+        <?php
+		  	include('includes/database.php'); ?>
+
+		  	 <div class="col-md-8">
           <div class="card mb-3">
             <div class="card-body" id="wartek">
               <div class="row">
@@ -139,7 +148,7 @@
                   <h6 class="mb-1">Full Name</h6>
                 </div>
                 <div class="col-sm-9 text-primary">
-                  Ridwan Kamil
+                   <?php echo $firstname." ".$lastname ?>
                 </div>
               </div>
               <hr>
@@ -148,7 +157,7 @@
                   <h6 class="mb-1">Nickname</h6>
                 </div>
                 <div class="col-sm-9 text-primary">
-                  Ridz
+                  <?php echo $username ?>
                 </div>
               </div>
               <hr>
@@ -157,7 +166,7 @@
                   <h6 class="mb-0">Email</h6>
                 </div>
                 <div class="col-sm-9 text-primary">
-                  ridz@upi.edu
+                  <?php echo $email ?>
                 </div>
               </div>
               <hr>
@@ -166,7 +175,7 @@
                   <h6 class="mb-0">Phone</h6>
                 </div>
                 <div class="col-sm-9 text-primary">
-                  087 0281310842
+                  <?php echo $number ?>
                 </div>
               </div>
               <hr>
@@ -175,7 +184,7 @@
                   <h6 class="mb-0">Region</h6>
                 </div>
                 <div class="col-sm-9 text-primary">
-                  Asia Afrika
+                   <?php echo $gender ?>
                 </div>
               </div>
               <hr>
@@ -238,6 +247,7 @@
           </div>
         </div>
       </div>
+    </div>
 
       <!-- Bootstrap core JavaScript -->
       <script src="vendor/jquery/jquery.min.js"></script>

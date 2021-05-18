@@ -35,24 +35,24 @@
     <!-- Left Sidebar -->
     <div class="bg-dark rounded" id="left-sidebar-wrapper">
       <div class="sidebar-brand text-center">
-        <img src="../assets/logo.svg" alt="logo spint" id="logo">
+        <img src="assets/logo.svg" alt="logo spint" id="logo">
       </div>
       <div class="text-center">
         <a href="Profile.html"><img src="assets/img/rkpp.png" alt="profile picture" class="" id="foto"></a>
       </div>
       <div class="list-group" id="sidebar">
         <a href="index.html" class="list-group-item active bg-dark mx-sm-2" id="iconbarleft"><img
-            src="../assets/icon/home-active.svg" alt="home" class="mx-auto"> Home</a>
-        <a href="#" class="list-group-item bg-dark mx-sm-2" id="iconbarleft"><img src="../assets/icon/chat.svg"
+            src="assets/icon/home-active.svg" alt="home" class="mx-auto"> Home</a>
+        <a href="#" class="list-group-item bg-dark mx-sm-2" id="iconbarleft"><img src="assets/icon/chat.svg"
             alt="chat" class="mx-auto iconhome"> Chat</a>
-        <a href="#" class="list-group-item bg-dark mx-sm-2" id="iconbarleft"><img src="../assets/icon/party.svg"
+        <a href="#" class="list-group-item bg-dark mx-sm-2" id="iconbarleft"><img src="assets/icon/party.svg"
             alt="party" class="mx-auto"> Party</a>
-        <a href="#" class="list-group-item bg-dark mx-sm-2" id="iconbarleft"><img src="../assets/icon/notif.svg"
+        <a href="#" class="list-group-item bg-dark mx-sm-2" id="iconbarleft"><img src="assets/icon/notif.svg"
             alt="notification" class="mx-auto"> Notification</a>
         <a href="Profile.html" class="list-group-item bg-dark mx-sm-2" id="iconbarleft">&nbsp;<img
-            src="../assets/icon/profile.svg" alt="profile" class="mx-auto" >&nbsp;&nbsp; Profile</a>
+            src="assets/icon/profile.svg" alt="profile" class="mx-auto" >&nbsp;&nbsp; Profile</a>
         <a href="setting.html" class="list-group-item bg-dark mx-sm-2" id="iconbarleft"><img
-            src="../assets/icon/setting.svg" alt="setting" class="mx-auto"> Setting</a>
+            src="assets/icon/setting.svg" alt="setting" class="mx-auto"> Setting</a>
       </div>
     </div>
     <!-- End Left Sidebar -->
@@ -64,7 +64,7 @@
         <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search">
         <div class="input-group-append">
           <span class="input-group-text amber lighten-3" id="basic-text1"><i class="" aria-hidden="true"><img
-                src="../assets/icon/search.svg"></i></span>
+                src="assets/icon/search.svg"></i></span>
         </div>
       </div>
 
@@ -72,11 +72,11 @@
       <div class="card-body rounded" id="tournament">
         <h4 class="text-center">Tournament</h4>
         <ul class="list-group">
-          <li class="list-group-item" id="list-tour"><img src="../assets/icon/dota.svg" alt="dota" class="w-25 mx-1">
+          <li class="list-group-item" id="list-tour"><img src="assets/icon/dota.svg" alt="dota" class="w-25 mx-1">
             The International</li>
-          <li class="list-group-item" id="list-tour"><img src="../assets/icon/csgo.svg" alt="cssgo" class="w-25 mx-1">
+          <li class="list-group-item" id="list-tour"><img src="assets/icon/csgo.svg" alt="cssgo" class="w-25 mx-1">
             CSGO Major</li>
-          <li class="list-group-item" id="list-tour"><img src="../assets/icon/ml.svg" alt="ml" class="w-25 mx-1"> M2
+          <li class="list-group-item" id="list-tour"><img src="assets/icon/ml.svg" alt="ml" class="w-25 mx-1"> M2
           </li>
         </ul>
       </div>
@@ -144,17 +144,17 @@
               <div class="card-footer p-2">
                 <div class="d-flex justify-content-between align-items-center text-center">
                   <div class="col">
-                    <img class="text-center" src="../assets/icon/photo.svg" alt="photo" class="mx-1 bg">
+                    <img class="text-center" src="assets/icon/photo.svg" alt="photo" class="mx-1 bg">
                     <input type="file" name="file" id="file" class="inputimage" onchange="readURL(this)"; />
                     <label for="file">Photo</label>
                   </div>
                   <div class="col">
                     <button type="button" class="btn btn-fposts btn-block btn-sm bg-dark" id="write-footer"><img
-                        src="../assets/icon/location.svg" alt="location" class="mx-1 bg"> Share location</button>
+                        src="assets/icon/location.svg" alt="location" class="mx-1 bg"> Share location</button>
                   </div>
                   <div class="col">
                     <button type="button" class="btn btn-fposts btn-block btn-sm bg-dark" id="write-footer"><img
-                        src="../assets/icon/tag.svg" alt="photo" class="mx-1 bg"> Tag Players</button>
+                        src="assets/icon/tag.svg" alt="photo" class="mx-1 bg"> Tag Players</button>
                   </div>
                 </div>
               </div>

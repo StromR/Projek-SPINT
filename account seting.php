@@ -53,20 +53,20 @@
             <div class="collapse navbar-collapse proder-last" id="nav">
               <ul class="navbar-nav flex-column w-100 justify-content-center">
                 <li>
-                  <a href="setting.html" class="nav-link mt-5"><img src="assets/icon/profile.svg" height="50px" width="50px" alt="profile"> Profile</a>
+                  <a href="setting.php" class="nav-link mt-5"><img src="assets/icon/profile.svg" height="50px" width="50px" alt="profile"> Profile</a>
                 </li>
                 <li>
-                  <a href="account seting.html" class="nav-link active"><img src="assets/icon/setting_active.svg" class="nav-link active" height="50px" width="50px" alt="setting"> Account</a>
+                  <a href="account seting.php" class="nav-link active"><img src="assets/icon/setting_active.svg" class="nav-link active" height="50px" width="50px" alt="setting"> Account</a>
                 </li>
                 <li>
-                  <a href="security.html" class="nav-link"><img src="assets/icon/security.svg" height="50px" width="50px" alt="security"> Security</a>
+                  <a href="security.php" class="nav-link"><img src="assets/icon/security.svg" height="50px" width="50px" alt="security"> Security</a>
                 </li>
                 <li>
-                  <a href="notif.html" class="nav-link"><img src="assets/icon/notif.svg" height="50px" width="50px" alt="notification"> Notification</a>
+                  <a href="notif.php" class="nav-link"><img src="assets/icon/notif.svg" height="50px" width="50px" alt="notification"> Notification</a>
                 </li>
                 <hr><hr><hr><hr><hr><hr>
                 <li>
-                  <a href="index.html" class="nav-link"><img src="assets/icon/Back.svg" height="50px" width="50px" alt="back"> Back</a>
+                  <a href="home.php" class="nav-link"><img src="assets/icon/Back.svg" height="50px" width="50px" alt="back"> Back</a>
                 </li>
               </ul>
             </div>

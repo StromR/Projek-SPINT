@@ -27,7 +27,7 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container-fluid">
-          <a href="index.html" class="navbar-brand"><img src="assets/logo.svg" alt="logo spint"></a>
+          <a href="home.php" class="navbar-brand"><img src="assets/logo.svg" alt="logo spint"></a>
                 <div class="input-group rounded" >
                   <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search">
                   <div class="input-group-append">
@@ -53,20 +53,20 @@
             <div class="collapse navbar-collapse proder-last" id="nav">
               <ul class="navbar-nav flex-column w-100 justify-content-center">
                 <li>
-                  <a href="setting.html" class="nav-link active mt-5"><img src="assets/icon/profile-active.svg" height="50px" width="50px" alt="profile"> Profile</a>
+                  <a href="setting.php" class="nav-link active mt-5"><img src="assets/icon/profile-active.svg" height="50px" width="50px" alt="profile"> Profile</a>
                 </li>
                 <li>
-                  <a href="account seting.html" class="nav-link"><img src="assets/icon/setting.svg" height="50px" width="50px" alt="setting"> Account</a>
+                  <a href="account seting.php" class="nav-link"><img src="assets/icon/setting.svg" height="50px" width="50px" alt="setting"> Account</a>
                 </li>
                 <li>
-                  <a href="security.html" class="nav-link"><img src="assets/icon/security.svg" height="50px" width="50px" alt="security"> Security</a>
+                  <a href="security.php" class="nav-link"><img src="assets/icon/security.svg" height="50px" width="50px" alt="security"> Security</a>
                 </li>
                 <li>
-                  <a href="notif.html" class="nav-link"><img src="assets/icon/notif.svg" height="50px" width="50px" alt="notification"> Notification</a>
+                  <a href="notif.php" class="nav-link"><img src="assets/icon/notif.svg" height="50px" width="50px" alt="notification"> Notification</a>
                 </li>
                 <hr><hr><hr><hr><hr><hr>
                 <li>
-                  <a href="index.html" class="nav-link"><img src="assets/icon/Back.svg" height="50px" width="50px" alt="back"> Back</a>
+                  <a href="home.php" class="nav-link"><img src="assets/icon/Back.svg" height="50px" width="50px" alt="back"> Back</a>
                 </li>
               </ul>
             </div>

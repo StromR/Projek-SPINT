@@ -15,10 +15,18 @@ include('includes/database.php');
 							echo "<script>alert('Please check your username and password!'); window.location='signin.php'</script>";
 						} 
 					else if ($count > 0)
-						{
+						{	
 							session_start();
+							
+							if(mysqli_query($con,"SELECT * FROM user WHERE user_id = 1 OR user_id = 2"))
+							{
+								$_SESSION['id'] = $row['user_id'];
+								header("location:https://www.google.com/");
+							}
+							else {
 							$_SESSION['id'] = $row['user_id'];
 							header("location:home.php");
+							}
 						}
 		}				
 	}

@@ -24,7 +24,7 @@
             <div>
                 <img src="assets/logo.svg" alt="">
             </div>
-                <p class="text-whitesmoke">Login</p>
+                <p class="text-whitesmoke">  </p>
             <div class="container-content">
                 <form class="margin-t" method="post" action="signin_form.php" enctype="multipart/form-data">
                     <div class="form-group">

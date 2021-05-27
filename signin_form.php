@@ -12,20 +12,21 @@ include('includes/database.php');
 				$count = mysqli_num_rows($result);				
 					if ($count == 0) 
 						{
-							echo "<script>alert('Please check your username and password!'); window.location='signin.php'</script>";
+							echo "<script>alert('Please check your username and password!'); window.location='index.php'</script>";
 						} 
 					else if ($count > 0)
 						{	
-							session_start();
-							
-							if(mysqli_query($con,"SELECT * FROM user WHERE user_id = 1 OR user_id = 2"))
-							{
+							if($row['email'] == "admin@spint.com" || $row['email'] == "admin2@spint.com")
+							{	
+								session_start();
 								$_SESSION['id'] = $row['user_id'];
-								header("location:https://www.google.com/");
+								header("location:admin.php");
 							}
-							else {
-							$_SESSION['id'] = $row['user_id'];
-							header("location:home.php");
+							else 
+							{
+								session_start();
+								$_SESSION['id'] = $row['user_id'];
+								header("location:home.php");
 							}
 						}
 		}				

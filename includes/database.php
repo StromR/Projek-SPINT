@@ -1,3 +1,3 @@
 <?php
-$con = mysqli_connect('localhost','root','','sourcecodester_biobook');
+$con = mysqli_connect('localhost','root','','spintdb');
 ?>

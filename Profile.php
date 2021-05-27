@@ -52,7 +52,7 @@
           alt="party" class="mx-auto"> Party</a>
       <a href="#" class="list-group-item list-group-item-action bg-dark mx-sm-2"><img src="assets/icon/notif.svg"
           alt="notification" class="mx-auto"> Notification</a>
-      <a href="Profile.php" class="list-group-item list-group-item-action active bg-dark mx-sm-2">&nbsp;<img
+      <a href="profile.php" class="list-group-item list-group-item-action active bg-dark mx-sm-2">&nbsp;<img
           src="assets/icon/profile-active.svg" alt="profile" class="mx-auto">&nbsp;&nbsp; Profile</a>
       <a href="setting.php" class="list-group-item list-group-item-action bg-dark mx-sm-2"><img
           src="assets/icon/setting.svg" alt="setting" class="mx-auto"> Setting</a>

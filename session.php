@@ -9,13 +9,12 @@ $id = $_SESSION['id'];
 
 $query=mysqli_query ($con,"SELECT * FROM user WHERE user_id ='$id'");
 $row=mysqli_fetch_array($query);
-$cover_picture=$row['cover_picture'];
 $profile_picture=$row['profile_picture'];
 $firstname=$row['firstname'];
 $lastname=$row['lastname'];
 $username=$row['username'];
 $birthday=$row['birthday'];
 $gender=$row['gender'];
-$number=$row['number'];
+$game=$row['game'];
 $email=$row['email'];
 ?>

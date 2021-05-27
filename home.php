@@ -143,11 +143,11 @@ if($years==1)
             src="assets/icon/home-active.svg" alt="home" class="mx-auto"> Home</a>
         <a href="#" class="list-group-item bg-dark mx-sm-2" id="iconbarleft"><img src="assets/icon/chat.svg"
             alt="chat" class="mx-auto iconhome"> Chat</a>
-        <a href="#" class="list-group-item bg-dark mx-sm-2" id="iconbarleft"><img src="assets/icon/party.svg"
+        <a href="logout.php" class="list-group-item bg-dark mx-sm-2" id="iconbarleft"><img src="assets/icon/party.svg"
             alt="party" class="mx-auto"> Party</a>
         <a href="#" class="list-group-item bg-dark mx-sm-2" id="iconbarleft"><img src="assets/icon/notif.svg"
             alt="notification" class="mx-auto"> Notification</a>
-        <a href="Profile.php" class="list-group-item bg-dark mx-sm-2" id="iconbarleft">&nbsp;<img
+        <a href="profile.php" class="list-group-item bg-dark mx-sm-2" id="iconbarleft">&nbsp;<img
             src="assets/icon/profile.svg" alt="profile" class="mx-auto" >&nbsp;&nbsp; Profile</a>
         <a href="setting.php" class="list-group-item bg-dark mx-sm-2" id="iconbarleft"><img
             src="assets/icon/setting.svg" alt="setting" class="mx-auto"> Setting</a>

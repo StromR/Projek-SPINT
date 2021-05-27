@@ -14,7 +14,7 @@
 							if ($error > 0){
 										die("Error uploading file! Code $error.");
 									}else{
-										if($size > 10000000) //conditions for the file
+										if($size > 10000000) //Untuk batas ukuran file
 										{
 										die("Format is not allowed or file size is too big!");
 										}

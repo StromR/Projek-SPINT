@@ -1,0 +1,13 @@
+-- Function
+
+
+
+-- Trigger
+CREATE TRIGGER  AFTER
+INSERT ON nama_table
+FOR EACH ROW
+
+BEGIN
+[PERINTAH SQL]
+END;
+DELIMITER;

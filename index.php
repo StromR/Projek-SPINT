@@ -25,19 +25,18 @@
                 <img src="assets/logo.svg" alt="">
             </div>
                 <p class="text-whitesmoke">  </p>
-            <div class="container-content">
+            <div class="login-box">
                 <form class="margin-t" method="post" action="signin_form.php" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="example@razor.com" required="" name="email">
+                    <div class="user-box">
+                        <input type="email" required="" name="email" placeholder="Your Email">
                     </div>
-                    <div class="form-group">
-                        <input type="password" name="password" class="form-control" placeholder="*****" required="">
+                    <div class="user-box">
+                        <input type="password" name="password" required="" placeholder="Password">
                     </div>
-                        <input type="submit" name="submit" value="Log in" class="base" title="Log in"/>
-                        
-                    <a class="text-whitesmoke" href="#"><small>Forgot your password?</small></a>
+                        <a><medium><input type="submit" name="submit" value="SIGN IN"/></medium></a>
                     <hr>
-                    <p class="text-whitesmoke text-center"><small>Do not have an account?<a class="text-whitesmoke" href="signup.php"><medium>Sign Up</medium></a></small></p>
+                    <p class="text-whitesmoke text-center"><small>Do not have an account?
+                    <a class="text-whitesmoke" href="signup.php"><medium>Sign Up</medium></a></small></p>
                 </form>
                 <p class="margin-t text-whitesmoke"><small> SPINT &copy; 2021</small> </p>
             </div>

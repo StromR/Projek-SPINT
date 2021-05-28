@@ -1,4 +1,3 @@
-<?php include ('session.php');?>
 <?php
 	include ('includes/database.php');
 	
@@ -27,9 +26,9 @@
 			echo "<script>alert('Password do not match!'); window.location='signup.php'</script>";
 			}else
 		{
-			mySQLi_query($con,"INSERT INTO user (firstname,lastname,username,username2,birthday,gender,number,email,email2,password,password2)
+			mySQLi_query($con,"INSERT INTO user (firstname,lastname,username,username2,birthday,gender,game,email,email2,password,password2)
 			VALUES ('$firstname','$lastname','$username','$username2','$birthday','$gender','$game','$email','$email2','$password','$password2')");
-			echo "<script>alert('Account successfully created!'); window.location='signin.php'</script>";
+			echo "<script>alert('Account successfully created!'); window.location='index.php'</script>";
 		}
 			
 	}

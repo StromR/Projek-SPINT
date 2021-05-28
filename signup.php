@@ -39,8 +39,8 @@
 							<td><input type="text" name="lastname" placeholder="Enter your lastname....." class="form-1" title="Enter your lastname" required /></td>
 						</tr>
 						<tr>
-							<td><label>User name*</label></td>
-							<td><label>Repeat user name*</label></td>
+							<td><label>Username*</label></td>
+							<td><label>Repeat username*</label></td>
 						</tr>
 						<tr>
 							<td><input type="text" name="username" placeholder="Enter your username....." class="form-1" title="Enter your username" required /></td>

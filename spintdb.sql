@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2021 at 12:43 PM
+-- Generation Time: May 28, 2021 at 04:21 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -20,6 +20,14 @@ SET time_zone = "+00:00";
 --
 -- Database: `spintdb`
 --
+
+DELIMITER $$
+--
+-- Procedures
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `filterumur` (IN `date1` DATE, IN `date2` DATE)  SELECT username, birthday FROM user WHERE birthday BETWEEN date1 AND date2$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -116,7 +124,36 @@ INSERT INTO `user` (`user_id`, `firstname`, `lastname`, `username`, `username2`,
 (2, 'Mark Anthony', 'Monaya', 'bobaytot11', 'bobaytot111', '1995-11-13', 'Male', '09989781346', 'markmonaya@gmail.com', 'markmonaya@gmail.com', '123456', '123456', 'upload/6.jpg'),
 (3, 'Jhonalyn', 'Montero', 'jho_phet', 'jho_phet', '14/June/1996', 'female', '09285444196', 'jho_montero@gmail.com', 'jho_montero@gmail.com', 'jhopeta', 'jhopeta', 'upload/400076_2586928959209_1713686254_n.jpg'),
 (4, 'Shaira', 'Gaston', 'djBatman', 'djBatman', '1/January/1901', 'female', '09989781356', 'shaira_gaston@gmail.com', 'shaira_gaston@gmail.com', '1234567', '1234567', 'upload/1554634_934733823220509_3613827536046659520_n.jpg'),
-(5, 'Janobe', 'sourcecode', 'admin', 'admin', '2021-05-28', 'Select', '09305235022', 'janobe@gmail.com', 'janobe@gmail.com', 'admin', 'admin', 'upload/Screenshot (35).png');
+(5, 'Janobe', 'sourcecode', 'admin', 'admin', '2021-05-28', 'Select', '09305235022', 'janobe@gmail.com', 'janobe@gmail.com', 'admin', 'admin', 'upload/Screenshot (35).png'),
+(6, 'joji', 'Brian', 'haha', 'haha', '1/January/1901', 'male', 'valorant', 'joji@spint.com', 'joji@spint.com', '12345', '12345', '');
+
+--
+-- Triggers `user`
+--
+DELIMITER $$
+CREATE TRIGGER `copy_user_data` AFTER INSERT ON `user` FOR EACH ROW INSERT INTO user_data (email, date) VALUES
+(NEW.email, CURRENT_TIMESTAMP())
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_data`
+--
+
+CREATE TABLE `user_data` (
+  `data_id` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user_data`
+--
+
+INSERT INTO `user_data` (`data_id`, `email`, `date`) VALUES
+(1, 'joji@spint.com', '2021-05-28');
 
 --
 -- Indexes for dumped tables
@@ -141,6 +178,12 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`);
 
 --
+-- Indexes for table `user_data`
+--
+ALTER TABLE `user_data`
+  ADD PRIMARY KEY (`data_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -160,7 +203,13 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `user_data`
+--
+ALTER TABLE `user_data`
+  MODIFY `data_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

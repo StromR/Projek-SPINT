@@ -10,7 +10,7 @@
 		$username2=$_POST['username2'];
 		$birthday=$_POST['day']."/".$_POST['month']."/".$_POST['year'];
 		$gender=$_POST['gender'];
-		$number=$_POST['number'];
+		$game=$_POST['game'];
 		$email=$_POST['email'];
 		$email2=$_POST['email2'];
 		$password=$_POST['password'];
@@ -28,7 +28,7 @@
 			}else
 		{
 			mySQLi_query($con,"INSERT INTO user (firstname,lastname,username,username2,birthday,gender,number,email,email2,password,password2)
-			VALUES ('$firstname','$lastname','$username','$username2','$birthday','$gender','$number','$email','$email2','$password','$password2')");
+			VALUES ('$firstname','$lastname','$username','$username2','$birthday','$gender','$game','$email','$email2','$password','$password2')");
 			echo "<script>alert('Account successfully created!'); window.location='signin.php'</script>";
 		}
 			

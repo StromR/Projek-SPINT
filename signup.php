@@ -105,8 +105,8 @@
 						</td>
 					</tr>
 					<tr>
-						<td><label>Mobile number*</label></td>
-						<td><input type="text" name="number" placeholder="09...." maxlength="13" class="form-1" title="Enter your mobile number" required /></td>
+						<td><label>Game*</label></td>
+						<td><input type="text" name="game" placeholder="09...." maxlength="13" class="form-1" title="Fill with your pro game" required /></td>
 					</tr>
 				</table>
 			</fieldset>

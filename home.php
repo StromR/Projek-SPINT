@@ -317,7 +317,7 @@ if($years==1)
                     </div>
                     <div class="modal-footer">
                       <div class="col-xs-12">
-                        <p class="text-left"><?php echo $row['content']; ?></p>
+                        <?php echo $row['content']; ?>
                       </div>
                     </div>
                   </div>

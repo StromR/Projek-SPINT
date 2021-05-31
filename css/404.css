@@ -4,9 +4,9 @@ html, body {
   }
   body {
     background-image: url("../assets/bg-login.png");
-    background-size: cover;
+    background-size: fill;
     font-family: 'Source Sans Pro', sans-serif;
-    color: rgba(255, 255, 255, 0.87);
+    color: whitesmoke;
   }
   .mx-auto {
     margin-left: auto;
@@ -25,6 +25,8 @@ html, body {
   #countUp .number {
     font-size: 4rem;
     font-weight: 500;
+    color : whitesmoke;
+    
   }
   #countUp .number + .text {
     margin: 0 0 1rem;
@@ -32,5 +34,6 @@ html, body {
   #countUp .text {
     font-weight: 300;
     text-align: center;
+    color : whitesmoke;
   }
   

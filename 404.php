@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
+    <!-- Link Bootstrap CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -24,7 +26,8 @@
                 <div class="number" data-count="404">0</div>
                 <div class="text">Hello visitor</div>
                 <div class="text">Why did you come here?</div>
-                <div class="text">GO BACK!!!</div>
+                <div class="text">GO BACK!!!</div> <br>
+                <a href="index.php" type="button" class="btn btn-outline-danger">BACK</a>
             </div>
         </div>
     </div>

@@ -1,13 +1,13 @@
 
 <?php
     include ('session.php');
+    $id = $_SESSION['id'];
+    $query=mysqli_query ($con,"SELECT * FROM user WHERE user_id ='$id'");
+    $row=mysqli_fetch_array($query);
+    $email=$row['email'];
 
-    if($row['email'] != "admin@spint.com" || $row['email'] != "admin2@spint.com")
-							{	
-								header("location:https://www.google.com/");
-							}
-							else 
-							{
+    if($email == "admin@spint.com" || $email == "admin2@spint.com")
+							{					
 ?>
 
 
@@ -413,6 +413,10 @@
   </div>
   <!-- End Wrapper -->
   <?php }
+    else
+    {
+        header("location:404.php");
+    }
   ?>
 
 <!-- 

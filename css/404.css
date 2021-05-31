@@ -4,10 +4,7 @@ html, body {
   }
   body {
     background-image: url("../assets/bg-login.png");
-    background-size: fill;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    min-width: 100vw;
+    background-size: cover;
     font-family: 'Source Sans Pro', sans-serif;
     color: rgba(255, 255, 255, 0.87);
   }

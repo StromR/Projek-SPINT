@@ -41,7 +41,7 @@
       <img src="assets/logo.svg" alt="logo spint" id="logo">
     </div>
     <div class="text-center">
-      <a href="updatephoto.php"><img src="<?php echo $row['profile_picture'] ?>" alt="profile picture" class="" id="foto"></a>
+      <a href="updatephoto.php"><img src="<?php echo $row['profile_picture'] ?>" alt="profile picture" class="rounded" id="foto" ></a>
       <p class="bg-dark"><?php echo $firstname ?></p>
     </div>
     <div class="list-group" id="sidebar">
@@ -83,7 +83,7 @@
           <div class="card">
             <div class="card-body">
               <div class="d-flex flex-column align-items-center text-center rounded">
-                <img src="<?php echo $row['profile_picture'] ?>" alt="Admin" width="100">
+                <img src="<?php echo $row['profile_picture'] ?>" alt="Admin" width="100" height="100" class="rounded">
                 <div class="mt-3">
                   <h4 id="wartek"><?php echo $firstname." ".$lastname ?></h4>
                   <p class="text-secondary mb-1"><?php echo $username ?></p>

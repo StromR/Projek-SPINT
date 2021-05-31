@@ -13,7 +13,7 @@ $lastname=$test['lastname'];
 $username=$test['username'];
 $birthday=$test['birthday'];
 $gender=$test['gender'];
-$number=$test['number'];
+$number=$test['game'];
 
 if(isset($_POST['save']))
 {	
@@ -22,10 +22,10 @@ $last_save=$_POST['lastname'];
 $username_save=$_POST['username'];
 $birthday_save=$_POST['birthday'];
 $gender_save=$_POST['gender'];
-$number_save=$_POST['number'];
+$number_save=$_POST['game'];
 
 	mysqli_query($con,"UPDATE user SET firstname ='$first_save', lastname ='$last_save', username ='$username_save', 
-	birthday ='$birthday_save' , gender ='$gender_save', number ='$number_save' WHERE user_id = '$id'");
+	birthday ='$birthday_save' , gender ='$gender_save', game ='$game_save' WHERE user_id = '$id'");
 	echo "Saved!";
 	
 	header("Location: profile.php");			

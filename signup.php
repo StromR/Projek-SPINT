@@ -109,10 +109,12 @@
 					<tr>
 						<td><label>Game*</label></td>
 						<td>
-							<label>Mobile Legend</label><input type="radio" name="game" value="Mobile Legend" required />
-							<label>Dota 2</label><input type="radio" name="game" value="Dota 2" required />
-							<label>CSGO</label><input type="radio" name="game" value="CSGO" required />
-							<label>Valorant</label><input type="radio" name="game" value="Valorant" required />
+							<select name=game style="font-size:18px;" required>
+								<option>CSGO</option>
+								<option>Dota 2</option>
+								<option>Mobile Legends</option>
+								<option>Valorant</option>
+							</select>
 						</td>
 					</tr>
 				</table>

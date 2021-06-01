@@ -108,7 +108,14 @@
 					</tr>
 					<tr>
 						<td><label>Game*</label></td>
-						<td><input type="text" name="game" placeholder="09...." maxlength="13" class="form-1" title="Fill with your pro game" required /></td>
+						<td>
+							<select name=game style="font-size:18px;" required>
+								<option>CSGO</option>
+								<option>Dota 2</option>
+								<option>Mobile Legends</option>
+								<option>Valorant</option>
+							</select>
+						</td>
 					</tr>
 				</table>
 			</fieldset>

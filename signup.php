@@ -90,7 +90,7 @@
 							<select name=year style="font-size:18px;" required>
 								<?php
 								$year = 1901;
-								while ($year <= 2014) {
+								while ($year <= 2021) {
 									echo "<option> $year
 					  </option>";
 									$year++;

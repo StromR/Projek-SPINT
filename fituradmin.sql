@@ -10,7 +10,6 @@ DELIMITER;
 $sql = "CALL filterumur(\'1901-01-1\', \'2021-05-28\')";
 
 
-
 -- Trigger
 CREATE TRIGGER  AFTER
 INSERT ON user

@@ -38,4 +38,11 @@ $sql = "CALL filterumur($date1, $date2)";
 								?>
 							</select>
 
+// Filter game
+$result = mysqli_query($con,"SELECT * FROM user WHERE email = '$email' and password='$password'");
+SELECT game FROM user
+EXCEPT
+game = $choosegame
+
+
 ?>

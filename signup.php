@@ -108,7 +108,12 @@
 					</tr>
 					<tr>
 						<td><label>Game*</label></td>
-						<td><input type="text" name="game" placeholder="09...." maxlength="13" class="form-1" title="Fill with your pro game" required /></td>
+						<td>
+							<label>Mobile Legend</label><input type="radio" name="game" value="Mobile Legend" required />
+							<label>Dota 2</label><input type="radio" name="game" value="Dota 2" required />
+							<label>CSGO</label><input type="radio" name="game" value="CSGO" required />
+							<label>Valorant</label><input type="radio" name="game" value="Valorant" required />
+						</td>
 					</tr>
 				</table>
 			</fieldset>

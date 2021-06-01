@@ -105,6 +105,7 @@
                 </div>
             </div>
 
+      <div class="col-md-12">
       <div class="table-responsive custom-table-responsive">
 
         <table class="table custom-table">
@@ -157,7 +158,7 @@
           </tbody>
         </table>
       </div>
-
+      </div>
 
     </div>
 

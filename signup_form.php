@@ -14,7 +14,11 @@
 		$email2=$_POST['email2'];
 		$password=$_POST['password'];
 		$password2=$_POST['password2'];
-		
+			
+			// Turn autocommit off
+			mysqli_autocommit($con,FALSE);
+
+
 			$sql=mySQLi_query($con,"select * from user WHERE email='$email'");
 			$row=mySQLi_num_rows($sql);
 			if ($row > 0)
@@ -26,9 +30,16 @@
 			echo "<script>alert('Password do not match!'); window.location='signup.php'</script>";
 			}else
 		{
-			mySQLi_query($con,"INSERT INTO user (firstname,lastname,username,username2,birthday,gender,game,email,email2,password,password2)
+			mySQLi_query($con,"
+			INSERT INTO user (firstname,lastname,username,username2,birthday,gender,game,email,email2,password,password2)
 			VALUES ('$firstname','$lastname','$username','$username2','$birthday','$gender','$game','$email','$email2','$password','$password2')");
-			echo "<script>alert('Account successfully created!'); window.location='index.php'</script>";
+			
+			// Commit transaction
+			mysqli_commit($con);
+			if (!mysqli_commit($con)) {
+				echo "<script>alert('Data not commited!'); window.location='signup.php'</script>";}
+			else{
+			echo "<script>alert('Account successfully created!'); window.location='index.php'</script>";}
 		}
 			
 	}

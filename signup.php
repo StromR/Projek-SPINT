@@ -49,7 +49,7 @@
 							<td><input type="text" name="username2" class="form-1" title="Enter your username" required /></td>
 						</tr>
 						<tr>
-							<td colspan="2">Note: No one can follow your username.</td>
+							<td colspan="2" class="text-secondary mb-1">Note: No one can follow your username.</td>
 						</tr>
 					</table>
 			</fieldset>

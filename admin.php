@@ -82,9 +82,8 @@
     
     <div class="container"> 
     
-      <h2 class="mb-5">Table #8</h2>
       <div class="col-md-12">
-                <div class="card mt-4">
+                <div class="card text-white bg-dark mb-3">
                     <div class="card-header" id="titlecard">
                         <h4>Data User</h4>
                     </div>
@@ -95,7 +94,7 @@
                                 <form action="" method="GET">
                                     <div class="input-group mb-3">
                                         <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Search data">
-                                        <button type="submit" class="btn btn-primary">Search</button>
+                                        <button type="submit" class="btn btn-danger">Search</button>
                                     </div>
                                 </form>
 

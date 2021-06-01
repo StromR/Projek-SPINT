@@ -63,11 +63,13 @@ body {
       .custom-table tbody tr th:last-child, .custom-table tbody tr td:last-child {
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px; }
+
     .custom-table tbody tr.spacer td {
       padding: 0 !important;
       height: 3px;
       border-radius: 0 !important;
       background: transparent !important; }
+      
     .custom-table tbody tr.active th, .custom-table tbody tr.active td, .custom-table tbody tr:hover th, .custom-table tbody tr:hover td {
       color: #fff;
       background: #2e2e36; }

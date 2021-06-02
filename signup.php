@@ -74,18 +74,18 @@
 								?>
 							</select>
 							<select name=month style="font-size:18px;" required>
-								<option>January</option>
-								<option>Febuary</option>
-								<option>March</option>
-								<option>April</option>
-								<option>May</option>
-								<option>June</option>
-								<option>July</option>
-								<option>August</option>
-								<option>September</option>
-								<option>October</option>
-								<option>November</option>
-								<option>December</option>
+								<option value="01">January</option>
+								<option value="02">Febuary</option>
+								<option value="03">March</option>
+								<option value="04">April</option>
+								<option value="05">May</option>
+								<option value="06">June</option>
+								<option value="07">July</option>
+								<option value="08">August</option>
+								<option value="09">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
 							</select>
 							<select name=year style="font-size:18px;" required>
 								<?php
@@ -116,6 +116,10 @@
 								<option>Valorant</option>
 							</select>
 						</td>
+					</tr>
+					<tr>
+							<td><label>MMR*</label></td>
+							<td><input type="number" name="mmr" placeholder="Enter your MMR....." class="form-1" title="Enter your MMR" required /></td>
 					</tr>
 				</table>
 			</fieldset>

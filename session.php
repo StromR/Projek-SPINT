@@ -16,5 +16,6 @@ $username=$row['username'];
 $birthday=$row['birthday'];
 $gender=$row['gender'];
 $game=$row['game'];
+$mmr=$row['mmr'];
 $email=$row['email'];
 ?>

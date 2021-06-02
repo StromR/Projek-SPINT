@@ -45,4 +45,44 @@ EXCEPT
 game = $choosegame
 
 
+// DESC
+$rankmmr = mysqli_query($con,"SELECT *, DENSE_RANK() OVER (ORDER BY mmr DESC) as rank FROM user");
+
+// ASC
+$rankmmr = mysqli_query($con,"SELECT *, DENSE_RANK() OVER (ORDER BY mmr ASC) as rank FROM user");
+
+
+SELECT * FROM user ORDER BY username DESC;
+
+
+else if(isset($_GET['rank'])){
+  $query = mysql_query("SELECT *, DENSE_RANK() OVER (ORDER BY mmr ASC) as rank FROM user");
+
+}
+
+
+
+else if(isset($_GET['rank']))
+                 {
+                    $con = mysqli_connect('localhost','root','','spintdb');
+                    $query = "SELECT *, DENSE_RANK() OVER (ORDER BY mmr DESC) as rank FROM user";
+                    $query_run = mysqli_query($con, $query);
+
+                  if(mysqli_num_rows($query_run) > 0)
+                  {
+                      foreach($query_run as $items)
+                      {
+                          ?>
+                          <tr>
+                              <td><?= $items['user_id']; ?></td>
+                              <td><?= $items['username']; ?></td>
+                              <td><?= $items['email']; ?></td>
+                              <td><?= $items['birthday']; ?></td>
+                              <td><?= $items['game']; ?></td>
+                              <td><?= $items['mmr']; ?></td>
+                          </tr>
+                          <?php
+                      }
+                  }
+                 }
 ?>

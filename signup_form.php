@@ -7,7 +7,7 @@
 		$lastname=$_POST['lastname'];
 		$username=$_POST['username'];
 		$username2=$_POST['username2'];
-		$birthday=$_POST['day']."/".$_POST['month']."/".$_POST['year'];
+		$birthday=$_POST['year']."-".$_POST['month']."-".$_POST['day'];
 		$gender=$_POST['gender'];
 		$game=$_POST['game'];
 		$email=$_POST['email'];

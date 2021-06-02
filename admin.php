@@ -89,14 +89,49 @@
           </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-6">
                   <form action="" method="GET">
                     <div class="input-group mb-3">
-                        <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Search data">
+                        <input type="text" name="search" class="form-control" placeholder="Search data">
                           <button type="submit" class="btn btn-danger">Search</button>
                     </div>
                   </form>
                 </div>
+                <form action="" method="GET">
+                <div class="col-md-3 mt-4">
+                  <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Filter
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                      <button class="dropdown-item" type="submit" name="rank_d">Rank Desc</button>
+                      <button class="dropdown-item" type="submit" name="rank_a">Rank Asc</button>
+                      <button class="dropdown-item" type="submit" name="user_d">Username Desc</button>
+                      <button class="dropdown-item" type="submit" name="user_a">Username Asc</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <form action="" method="GET">
+              <div class="col-md-12 mt-4">
+                   <p>
+                    <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      Birthday Filter
+                    </button>
+                  </p>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                      <p>First Date</p>
+                      <input type="text" name="date1" class="form-control" placeholder="Search data">
+                      <p>Second Date</p>
+                      <input type="text" name="date2" class="form-control" placeholder="Search data">
+                      <div class="mx-3 mt-2">
+                      <button type="submit" class="btn btn-danger">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              </form>
               </div>
             </div>
           </div>
@@ -115,6 +150,7 @@
               <th scope="col">Email</th>
               <th scope="col">Birthday</th>
               <th scope="col">Game</th>
+              <th scope="col">MMR</th>
             </tr>
           </thead>
           <tbody>
@@ -139,6 +175,7 @@
                              <td><?= $items['email']; ?></td>
                              <td><?= $items['birthday']; ?></td>
                              <td><?= $items['game']; ?></td>
+                             <td><?= $items['mmr']; ?></td>
                          </tr>
                          <?php
                      }
@@ -147,7 +184,155 @@
                  {
                      ?>
                          <tr>
-                             <td colspan="4">No Record Found</td>
+                             <td colspan="6">No Record Found</td>
+                         </tr>
+                     <?php
+                 }
+             }
+              else if(isset($_GET['rank_d']))
+              {
+                $con = mysqli_connect('localhost','root','','spintdb');
+                $query = "SELECT *, DENSE_RANK() OVER (ORDER BY mmr DESC) as rank FROM user";
+                $query_run = mysqli_query($con, $query);
+
+              if(mysqli_num_rows($query_run) > 0)
+              {
+                  foreach($query_run as $items)
+                  {
+                      ?>
+                      <tr>
+                          <td><?= $items['user_id']; ?></td>
+                          <td><?= $items['username']; ?></td>
+                          <td><?= $items['email']; ?></td>
+                          <td><?= $items['birthday']; ?></td>
+                          <td><?= $items['game']; ?></td>
+                          <td><?= $items['mmr']; ?></td>
+                      </tr>
+                      <?php
+                  }
+              }
+              }
+              else if(isset($_GET['rank_a']))
+              {
+                $con = mysqli_connect('localhost','root','','spintdb');
+                $query = "SELECT *, DENSE_RANK() OVER (ORDER BY mmr ASC) as rank FROM user";
+                $query_run = mysqli_query($con, $query);
+
+              if(mysqli_num_rows($query_run) > 0)
+              {
+                  foreach($query_run as $items)
+                  {
+                      ?>
+                      <tr>
+                          <td><?= $items['user_id']; ?></td>
+                          <td><?= $items['username']; ?></td>
+                          <td><?= $items['email']; ?></td>
+                          <td><?= $items['birthday']; ?></td>
+                          <td><?= $items['game']; ?></td>
+                          <td><?= $items['mmr']; ?></td>
+                      </tr>
+                      <?php
+                  }
+              }
+              }
+              else if(isset($_GET['user_d']))
+              {
+                $con = mysqli_connect('localhost','root','','spintdb');
+                $query = "SELECT * FROM user ORDER BY username DESC;";
+                $query_run = mysqli_query($con, $query);
+
+              if(mysqli_num_rows($query_run) > 0)
+              {
+                  foreach($query_run as $items)
+                  {
+                      ?>
+                      <tr>
+                          <td><?= $items['user_id']; ?></td>
+                          <td><?= $items['username']; ?></td>
+                          <td><?= $items['email']; ?></td>
+                          <td><?= $items['birthday']; ?></td>
+                          <td><?= $items['game']; ?></td>
+                          <td><?= $items['mmr']; ?></td>
+                      </tr>
+                      <?php
+                  }
+              }
+              }
+              else if(isset($_GET['user_a']))
+              {
+                $con = mysqli_connect('localhost','root','','spintdb');
+                $query = "SELECT * FROM user ORDER BY username ASC;";
+                $query_run = mysqli_query($con, $query);
+
+              if(mysqli_num_rows($query_run) > 0)
+              {
+                  foreach($query_run as $items)
+                  {
+                      ?>
+                      <tr>
+                          <td><?= $items['user_id']; ?></td>
+                          <td><?= $items['username']; ?></td>
+                          <td><?= $items['email']; ?></td>
+                          <td><?= $items['birthday']; ?></td>
+                          <td><?= $items['game']; ?></td>
+                          <td><?= $items['mmr']; ?></td>
+                      </tr>
+                      <?php
+                  }
+              }
+              }
+              else if(isset($_GET['user_a']))
+              {
+                $con = mysqli_connect('localhost','root','','spintdb');
+                $query = "SELECT * FROM user ORDER BY username ASC;";
+                $query_run = mysqli_query($con, $query);
+
+              if(mysqli_num_rows($query_run) > 0)
+              {
+                  foreach($query_run as $items)
+                  {
+                      ?>
+                      <tr>
+                          <td><?= $items['user_id']; ?></td>
+                          <td><?= $items['username']; ?></td>
+                          <td><?= $items['email']; ?></td>
+                          <td><?= $items['birthday']; ?></td>
+                          <td><?= $items['game']; ?></td>
+                          <td><?= $items['mmr']; ?></td>
+                      </tr>
+                      <?php
+                  }
+              }
+              }
+              else if(isset($_GET['date1'], $_GET['date2']))
+              {  $con = mysqli_connect('localhost','root','','spintdb');
+
+                 $date1 = $_GET['date1'];
+                 $date2 = $_GET['date2'];
+                 $query = "CALL filterumur($date1,$date2)";
+                 $query_run = mysqli_query($con, $query);
+                  
+                 if(mysqli_num_rows($query_run) > 0)
+                 {
+                     foreach($query_run as $items)
+                     {
+                         ?>
+                         <tr>
+                             <td><?= $items['user_id']; ?></td>
+                             <td><?= $items['username']; ?></td>
+                             <td><?= $items['email']; ?></td>
+                             <td><?= $items['birthday']; ?></td>
+                             <td><?= $items['game']; ?></td>
+                             <td><?= $items['mmr']; ?></td>
+                         </tr>
+                         <?php
+                     }
+                 }
+                 else
+                 {
+                     ?>
+                         <tr>
+                             <td colspan="6">No Record Found</td>
                          </tr>
                      <?php
                  }
@@ -158,7 +343,8 @@
       </div>
       </div>
 
-      <!-- User Data -->
+      
+      <!-- Table Trigger -->
       <div class="col-md-12">
       <h3 class="text-white center">Table Triger User</h3>
       </div>
@@ -217,7 +403,7 @@
     {
         header("location:404.php");
     }
-  ?>
+  ?> 
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

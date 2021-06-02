@@ -118,8 +118,8 @@
 						</td>
 					</tr>
 					<tr>
-							<td><label>MMR*</label></td>
-							<td><input type="number" name="mmr" placeholder="Enter your MMR....." class="form-1" title="Enter your MMR" required /></td>
+							<td><label>MMR</label></td>
+							<td><input type="number" name="mmr" placeholder="Enter your MMR....." class="form-1" title="Enter your MMR"/></td>
 					</tr>
 				</table>
 			</fieldset>

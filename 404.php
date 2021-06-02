@@ -16,6 +16,8 @@
     <!-- Link Bootstrap CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="icon" href="assets/logo.svg">
+
 </head>
 <body>
     

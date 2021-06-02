@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2021 at 03:33 PM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.6
+-- Generation Time: Jun 02, 2021 at 03:52 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -26,6 +26,11 @@ DELIMITER $$
 -- Procedures
 --
 CREATE DEFINER=`root`@`localhost` PROCEDURE `filterumur` (IN `date1` DATE, IN `date2` DATE)  SELECT * FROM user WHERE birthday BETWEEN date1 AND date2$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `TambahSignUp` (`firstname` VARCHAR(100), `lastname` VARCHAR(100), `username` VARCHAR(100), `username2` VARCHAR(100), `birthday` DATE, `gender` VARCHAR(100), `game` VARCHAR(100), `mmr` INT, `email` VARCHAR(100), `email2` VARCHAR(100), `password` VARCHAR(100), `password2` VARCHAR(100))  BEGIN
+INSERT INTO user (firstname,lastname,username,username2,birthday,gender,game, mmr,email,email2,password,password2) VALUES (firstname,lastname,username,username2,birthday,gender,game, mmr,email,email2,password,password2);
+
+END$$
 
 --
 -- Functions
@@ -99,7 +104,8 @@ INSERT INTO `user` (`user_id`, `firstname`, `lastname`, `username`, `username2`,
 (1, 'admin', '1', 'admin1', 'admin1', '2000-11-01', 'male', 'Mobile Legends', 500, 'admin@spint.com', 'admin@spint.com', 'admin', 'admin', 'upload/130ca9b06fa3fc47b79f3913a0fc462f.jpg'),
 (2, 'admin', '2', 'admin2', 'admin2', '2001-02-01', 'female', 'Dota 2', 1230, 'admin2@spint.com', 'admin2@spint.com', '12345', '12345', ''),
 (3, 'Lemon', 'Nilo', 'lemonilo', 'lemonilo', '1999-10-10', 'male', 'Mobile Legends', 90, 'lemonilo@gmail.com', 'lemonilo@gmail.com', '1234', '1234', 'upload/029587800_1552372394-LEMON_RRQ.jpg'),
-(16, 'Bocil', 'Ajaib', '1234', '1234', '2004-12-23', 'male', 'Valorant', 1000, 'bovil@gmail.com', 'bovil@gmail.com', '123', '123', '');
+(16, 'Bocil', 'Ajaib', '1234', '1234', '2004-12-23', 'male', 'Valorant', 1000, 'bovil@gmail.com', 'bovil@gmail.com', '123', '123', ''),
+(17, 'test', 'test', 'wanieun', 'wanieun', '1911-01-01', 'male', 'Mobile Legends', 1000, 'test@gmail.com', 'test@gmail.com', 'naonsia', 'naonsia', '');
 
 --
 -- Triggers `user`
@@ -137,7 +143,8 @@ INSERT INTO `user_data` (`data_id`, `email`, `date`) VALUES
 (8, 'bovil@gmail.com', '2021-06-02'),
 (9, 'bovil1@gmail.com', '2021-06-02'),
 (10, 'bovil11@gmail.com', '2021-06-02'),
-(11, 'bovil@gmail.com', '2021-06-02');
+(11, 'bovil@gmail.com', '2021-06-02'),
+(12, 'test@gmail.com', '2021-06-02');
 
 --
 -- Indexes for dumped tables
@@ -187,13 +194,13 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `user_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `user_data`
 --
 ALTER TABLE `user_data`
-  MODIFY `data_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `data_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

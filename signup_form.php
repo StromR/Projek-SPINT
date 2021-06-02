@@ -32,8 +32,7 @@
 			}else
 		{
 			mySQLi_query($con,"
-			INSERT INTO user (firstname,lastname,username,username2,birthday,gender,game, mmr,email,email2,password,password2)
-			VALUES ('$firstname','$lastname','$username','$username2','$birthday','$gender','$game', $mmr,'$email','$email2','$password','$password2')");
+			call TambahSignUp ('$firstname','$lastname','$username','$username2','$birthday','$gender','$game', $mmr,'$email','$email2','$password','$password2')");
 			
 			// Commit transaction
 			mysqli_commit($con);

@@ -112,26 +112,6 @@
                   </div>
                 </div>
               </form>
-              <form action="" method="GET">
-              <div class="col-md-12 mt-4">
-                   <p>
-                    <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                      Birthday Filter
-                    </button>
-                  </p>
-                  <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-                      <p>First Date</p>
-                      <input type="text" name="date1" class="form-control" placeholder="Search data">
-                      <p>Second Date</p>
-                      <input type="text" name="date2" class="form-control" placeholder="Search data">
-                      <div class="mx-3 mt-2">
-                      <button type="submit" class="btn btn-danger">Submit</button>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-              </form>
               </div>
             </div>
           </div>
@@ -304,39 +284,6 @@
                   }
               }
               }
-              else if(isset($_GET['date1'], $_GET['date2']))
-              {  $con = mysqli_connect('localhost','root','','spintdb');
-
-                 $date1 = $_GET['date1'];
-                 $date2 = $_GET['date2'];
-                 $query = "SELECT filterumur($date1,$date2)";
-                 $query_run = mysqli_query($con, $query);
-
-                 
-                 
-                     while(mysqli_fetch_array($query_run))
-                     {
-                         ?>
-                         <tr>
-                             <td><?php echo $row['user_id']; ?></td>
-                             <td><?php echo $row['username']; ?></td>
-                             <td><?= $items['email']; ?></td>
-                             <td><?= $items['birthday']; ?></td>
-                             <td><?= $items['game']; ?></td>
-                             <td><?= $items['mmr']; ?></td>
-                         </tr>
-                         <?php
-                     }
-                 }
-                 else
-                 {
-                     ?>
-                         <tr>
-                             <td colspan="6">No Record Found</td>
-                         </tr>
-                     <?php
-                 }
-             
             ?>
           </tbody>
         </table>

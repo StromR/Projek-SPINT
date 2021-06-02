@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2021 at 03:52 PM
+-- Generation Time: Jun 02, 2021 at 04:12 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -42,19 +42,6 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `photos`
---
-
-CREATE TABLE `photos` (
-  `photo_id` int(100) NOT NULL,
-  `location` varchar(100) NOT NULL,
-  `user_id` varchar(100) NOT NULL,
-  `date_added` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `post`
 --
 
@@ -71,7 +58,8 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`post_id`, `user_id`, `post_image`, `content`, `created`) VALUES
-(22, '10', 'upload/130ca9b06fa3fc47b79f3913a0fc462f.jpg', 'Asik aku jadi mythic. Suka deh. ', '1622559789');
+(26, '3', 'upload/valorant-ace.png', 'Aku kemarin main valo dapet ACE dong, tapi lawannya goldly', '1622642405'),
+(28, '16', 'upload/savage jilong.jpg', 'asik dapet savage', '1622643010');
 
 -- --------------------------------------------------------
 
@@ -101,10 +89,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `firstname`, `lastname`, `username`, `username2`, `birthday`, `gender`, `game`, `mmr`, `email`, `email2`, `password`, `password2`, `profile_picture`) VALUES
-(1, 'admin', '1', 'admin1', 'admin1', '2000-11-01', 'male', 'Mobile Legends', 500, 'admin@spint.com', 'admin@spint.com', 'admin', 'admin', 'upload/130ca9b06fa3fc47b79f3913a0fc462f.jpg'),
+(1, 'admin', '1', 'admin1', 'admin1', '2000-11-01', 'male', 'Mobile Legends', 500, 'admin@spint.com', 'admin@spint.com', 'admin', 'admin', 'upload/bg-login.png'),
 (2, 'admin', '2', 'admin2', 'admin2', '2001-02-01', 'female', 'Dota 2', 1230, 'admin2@spint.com', 'admin2@spint.com', '12345', '12345', ''),
 (3, 'Lemon', 'Nilo', 'lemonilo', 'lemonilo', '1999-10-10', 'male', 'Mobile Legends', 90, 'lemonilo@gmail.com', 'lemonilo@gmail.com', '1234', '1234', 'upload/029587800_1552372394-LEMON_RRQ.jpg'),
-(16, 'Bocil', 'Ajaib', '1234', '1234', '2004-12-23', 'male', 'Valorant', 1000, 'bovil@gmail.com', 'bovil@gmail.com', '123', '123', ''),
+(16, 'Bocil', 'Ajaib', '1234', '1234', '2004-12-23', 'male', 'Valorant', 1000, 'bovil@gmail.com', 'bovil@gmail.com', '123', '123', 'upload/boyfriend ; sunoo.jpg'),
 (17, 'test', 'test', 'wanieun', 'wanieun', '1911-01-01', 'male', 'Mobile Legends', 1000, 'test@gmail.com', 'test@gmail.com', 'naonsia', 'naonsia', '');
 
 --
@@ -151,12 +139,6 @@ INSERT INTO `user_data` (`data_id`, `email`, `date`) VALUES
 --
 
 --
--- Indexes for table `photos`
---
-ALTER TABLE `photos`
-  ADD PRIMARY KEY (`photo_id`);
-
---
 -- Indexes for table `post`
 --
 ALTER TABLE `post`
@@ -179,16 +161,10 @@ ALTER TABLE `user_data`
 --
 
 --
--- AUTO_INCREMENT for table `photos`
---
-ALTER TABLE `photos`
-  MODIFY `photo_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `post_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `post_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `user`

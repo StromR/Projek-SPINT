@@ -94,8 +94,8 @@ if ($email == "admin@spint.com" || $email == "admin2@spint.com") {
                             Filter
                           </button>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <button class="dropdown-item" type="submit" name="rank_d">Rank Desc</button>
-                            <button class="dropdown-item" type="submit" name="rank_a">Rank Asc</button>
+                            <button class="dropdown-item" type="submit" name="rank_d">MMR Desc</button>
+                            <button class="dropdown-item" type="submit" name="rank_a">MMR Asc</button>
                             <button class="dropdown-item" type="submit" name="user_d">Username Desc</button>
                             <button class="dropdown-item" type="submit" name="user_a">Username Asc</button>
                           </div>

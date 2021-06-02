@@ -309,17 +309,17 @@
 
                  $date1 = $_GET['date1'];
                  $date2 = $_GET['date2'];
-                 $query = "CALL filterumur($date1,$date2)";
+                 $query = "SELECT filterumur($date1,$date2)";
                  $query_run = mysqli_query($con, $query);
-                  
-                 if(mysqli_num_rows($query_run) > 0)
-                 {
-                     foreach($query_run as $items)
+
+                 
+                 
+                     while(mysqli_fetch_array($query_run))
                      {
                          ?>
                          <tr>
-                             <td><?= $items['user_id']; ?></td>
-                             <td><?= $items['username']; ?></td>
+                             <td><?php echo $row['user_id']; ?></td>
+                             <td><?php echo $row['username']; ?></td>
                              <td><?= $items['email']; ?></td>
                              <td><?= $items['birthday']; ?></td>
                              <td><?= $items['game']; ?></td>
@@ -336,7 +336,7 @@
                          </tr>
                      <?php
                  }
-             }
+             
             ?>
           </tbody>
         </table>

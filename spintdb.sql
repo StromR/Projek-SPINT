@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2021 at 05:04 PM
+-- Generation Time: Jun 02, 2021 at 03:33 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -25,7 +25,12 @@ DELIMITER $$
 --
 -- Procedures
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `filterumur` (IN `date1` DATE, IN `date2` DATE)  SELECT username, birthday FROM user WHERE birthday BETWEEN date1 AND date2$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `filterumur` (IN `date1` DATE, IN `date2` DATE)  SELECT * FROM user WHERE birthday BETWEEN date1 AND date2$$
+
+--
+-- Functions
+--
+CREATE DEFINER=`root`@`localhost` FUNCTION `birthdayfilter` (`date1` DATE, `date2` DATE) RETURNS DATE RETURN (SELECT birthday FROM user WHERE birthday > @date1 AND birthday < @date2)$$
 
 DELIMITER ;
 
@@ -75,9 +80,10 @@ CREATE TABLE `user` (
   `lastname` varchar(100) NOT NULL,
   `username` varchar(100) NOT NULL,
   `username2` varchar(100) NOT NULL,
-  `birthday` varchar(100) NOT NULL,
+  `birthday` date NOT NULL,
   `gender` varchar(100) NOT NULL,
   `game` varchar(100) NOT NULL,
+  `mmr` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
   `email2` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
@@ -89,10 +95,11 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `firstname`, `lastname`, `username`, `username2`, `birthday`, `gender`, `game`, `email`, `email2`, `password`, `password2`, `profile_picture`) VALUES
-(1, 'admin', '1', 'admin1', 'admin1', '1/January/1901', 'male', 'Mobile Legends', 'admin@spint.com', 'admin@spint.com', 'admin', 'admin', ''),
-(2, 'admin', '2', 'admin2', 'admin2', '1/January/1901', 'female', 'Dota 2', 'admin2@spint.com', 'admin2@spint.com', '12345', '12345', ''),
-(10, 'Lemon', 'Nilo', 'lemonilo', 'lemonilo', '31/June/1998', 'male', 'Mobile Legends', 'lemonilo@gmail.com', 'lemonilo@gmail.com', '1234', '1234', 'upload/029587800_1552372394-LEMON_RRQ.jpg');
+INSERT INTO `user` (`user_id`, `firstname`, `lastname`, `username`, `username2`, `birthday`, `gender`, `game`, `mmr`, `email`, `email2`, `password`, `password2`, `profile_picture`) VALUES
+(1, 'admin', '1', 'admin1', 'admin1', '2000-11-01', 'male', 'Mobile Legends', 500, 'admin@spint.com', 'admin@spint.com', 'admin', 'admin', 'upload/130ca9b06fa3fc47b79f3913a0fc462f.jpg'),
+(2, 'admin', '2', 'admin2', 'admin2', '2001-02-01', 'female', 'Dota 2', 1230, 'admin2@spint.com', 'admin2@spint.com', '12345', '12345', ''),
+(3, 'Lemon', 'Nilo', 'lemonilo', 'lemonilo', '1999-10-10', 'male', 'Mobile Legends', 90, 'lemonilo@gmail.com', 'lemonilo@gmail.com', '1234', '1234', 'upload/029587800_1552372394-LEMON_RRQ.jpg'),
+(16, 'Bocil', 'Ajaib', '1234', '1234', '2004-12-23', 'male', 'Valorant', 1000, 'bovil@gmail.com', 'bovil@gmail.com', '123', '123', '');
 
 --
 -- Triggers `user`
@@ -124,7 +131,13 @@ INSERT INTO `user_data` (`data_id`, `email`, `date`) VALUES
 (2, 'bovil@gmail.com', '2021-06-01'),
 (3, 'admin@spint.com', '2021-06-01'),
 (4, 'admin2@spint.com', '2021-06-01'),
-(5, 'lemonilo@gmail.com', '2021-06-01');
+(5, 'lemonilo@gmail.com', '2021-06-01'),
+(6, 'bovil@gmail.com', '2021-06-02'),
+(7, 'bovil@gmail.com', '2021-06-02'),
+(8, 'bovil@gmail.com', '2021-06-02'),
+(9, 'bovil1@gmail.com', '2021-06-02'),
+(10, 'bovil11@gmail.com', '2021-06-02'),
+(11, 'bovil@gmail.com', '2021-06-02');
 
 --
 -- Indexes for dumped tables
@@ -174,13 +187,13 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `user_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `user_data`
 --
 ALTER TABLE `user_data`
-  MODIFY `data_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `data_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

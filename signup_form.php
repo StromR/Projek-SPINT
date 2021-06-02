@@ -10,6 +10,7 @@
 		$birthday=$_POST['year']."-".$_POST['month']."-".$_POST['day'];
 		$gender=$_POST['gender'];
 		$game=$_POST['game'];
+		$mmr=$_POST['mmr'];
 		$email=$_POST['email'];
 		$email2=$_POST['email2'];
 		$password=$_POST['password'];
@@ -31,8 +32,8 @@
 			}else
 		{
 			mySQLi_query($con,"
-			INSERT INTO user (firstname,lastname,username,username2,birthday,gender,game,email,email2,password,password2)
-			VALUES ('$firstname','$lastname','$username','$username2','$birthday','$gender','$game','$email','$email2','$password','$password2')");
+			INSERT INTO user (firstname,lastname,username,username2,birthday,gender,game, mmr,email,email2,password,password2)
+			VALUES ('$firstname','$lastname','$username','$username2','$birthday','$gender','$game', $mmr,'$email','$email2','$password','$password2')");
 			
 			// Commit transaction
 			mysqli_commit($con);

@@ -83,26 +83,25 @@
     <div class="container"> 
     
       <div class="col-md-12">
-                <div class="card text-white bg-dark mb-3">
-                    <div class="card-header" id="titlecard">
-                        <h4>Data User</h4>
+        <div class="card text-white bg-dark mb-3">
+          <div class="card-header" id="titlecard">
+              <h4>Data User</h4>
+          </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-7">
+                  <form action="" method="GET">
+                    <div class="input-group mb-3">
+                        <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Search data">
+                          <button type="submit" class="btn btn-danger">Search</button>
                     </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-7">
-
-                                <form action="" method="GET">
-                                    <div class="input-group mb-3">
-                                        <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Search data">
-                                        <button type="submit" class="btn btn-danger">Search</button>
-                                    </div>
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
+                  </form>
                 </div>
+              </div>
             </div>
+          </div>
+      </div>
+          
 
       <div class="col-md-12">
       <div class="table-responsive custom-table-responsive">
@@ -159,10 +158,54 @@
       </div>
       </div>
 
+      <!-- User Data -->
+      <div class="col-md-12">
+      <h3 class="text-white center">Table Triger User</h3>
+      </div>
+      <div class="col-md-12">
+      <div class="table-responsive custom-table-responsive">
+
+        <table class="table custom-table">
+          <thead>
+            <tr>  
+
+              <th scope="col">Data ID</th>
+              <th scope="col">Email</th>
+              <th scope="col">Sign Up Date</th>
+            </tr>
+          </thead>
+          <tbody>
+          <?php 
+            
+             {   $con = mysqli_connect('localhost','root','','spintdb');
+
+                 $query = "SELECT * FROM user_data";
+                 $query_run = mysqli_query($con, $query);
+
+                 if(mysqli_num_rows($query_run) > 0)
+                 {
+                     foreach($query_run as $items)
+                     {
+                         ?>
+                         <tr>
+                             <td><?= $items['data_id']; ?></td>
+                             <td><?= $items['email']; ?></td>
+                             <td><?= $items['date']; ?></td>
+                         </tr>
+                         <?php
+                     }
+                 }
+             }
+            ?>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
     </div>
 
-  </div>
-
+    </div>
+    </div>
     </div>
     <!-- End Page Content -->>
     
@@ -175,11 +218,6 @@
         header("location:404.php");
     }
   ?>
-
-<!-- 
-  <div class="loader-wrapper">
-    <span class="loader"><span class="loader-inner"></span></span>
-  </div> -->
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

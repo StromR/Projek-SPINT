@@ -2,7 +2,7 @@
 include("includes/database.php");
 session_start();
 if (!isset($_SESSION['id'])){
-header('location:index.php');
+header('location:404.php');
 }
 
 $id = $_SESSION['id'];

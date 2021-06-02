@@ -24,6 +24,7 @@
     <title>Setting</title>
 </head>
 <body>
+<?php include ('session.php');?>
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container-fluid">

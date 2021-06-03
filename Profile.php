@@ -157,10 +157,10 @@
                 <hr>
                 <div class="row">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Address</h6>
+                    <h6 class="mb-0">Occupation</h6>
                   </div>
                   <div class="col-sm-9 text-primary">
-                    Home
+                    Pro Player
                   </div>
                 </div>
               </div>

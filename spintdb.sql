@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2021 at 04:12 PM
+-- Generation Time: Jun 03, 2021 at 04:05 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -59,7 +59,9 @@ CREATE TABLE `post` (
 
 INSERT INTO `post` (`post_id`, `user_id`, `post_image`, `content`, `created`) VALUES
 (26, '3', 'upload/valorant-ace.png', 'Aku kemarin main valo dapet ACE dong, tapi lawannya goldly', '1622642405'),
-(28, '16', 'upload/savage jilong.jpg', 'asik dapet savage', '1622643010');
+(28, '16', 'upload/savage jilong.jpg', 'asik dapet savage', '1622643010'),
+(31, '1', 'upload/5 buletan.png', 'Op banget sih ini hero', '1622646512'),
+(32, '1', 'upload/WANEELLA pixel art.gif', 'Aestetik', '1622646577');
 
 -- --------------------------------------------------------
 
@@ -164,7 +166,7 @@ ALTER TABLE `user_data`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `post_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `post_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `user`

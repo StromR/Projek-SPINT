@@ -36,10 +36,6 @@
 			
 			// Commit transaction
 			mysqli_commit($con);
-			if (!mysqli_commit($con)) {
-				echo "<script>alert('Data not commited!'); window.location='signup.php'</script>";}
-			else{
-			echo "<script>alert('Account successfully created!'); window.location='index.php'</script>";}
 		}
 			
 	}

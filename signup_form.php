@@ -16,7 +16,7 @@
 		$password=$_POST['password'];
 		$password2=$_POST['password2'];
 			
-			// Turn autocommit off
+			// Autocommit
 			mysqli_autocommit($con,FALSE);
 
 

@@ -37,7 +37,7 @@ $number_save=$_POST['game'];
 <html>
 
 	<head>
-		<title>Welcome  To Biobook - Sign up, Log in, Post </title>
+		<title>Edit Profile</title>
 		<link rel="stylesheet" type="text/css" href="css/edit_profile.css">
 	</head>
 
@@ -47,7 +47,7 @@ $number_save=$_POST['game'];
 	<div id="header">
 		<div class="head-view">
 			<ul>
-				<li><a href="home.php" title="Biobook"><b>biobook</b></a></li>
+				<li><a href="home.php" title="home"><b>Home</b></a></li>
 				<li></li>
 				<li></li>
 				<li></li>

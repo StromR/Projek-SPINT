@@ -2,8 +2,9 @@
 <html>
 
 	<head>
-		<title>Welcome  To Biobook - Sin up, Log in, Chat </title>
+		<title>Update Photo </title>
 		<link rel="stylesheet" type="text/css" href="css/home.css">
+		<link rel="icon" href="assets/logo.svg">
 	</head>
 
 <body>

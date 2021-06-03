@@ -36,6 +36,8 @@
 			
 			// Commit transaction
 			mysqli_commit($con);
+			if (mysqli_commit($con)) {
+			echo "<script>alert('Account successfully created!'); window.location='index.php'</script>";}
 		}
 			
 	}

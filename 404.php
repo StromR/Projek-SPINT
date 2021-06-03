@@ -29,7 +29,7 @@
                 <div class="text">Hello visitor</div>
                 <div class="text">Why did you come here?</div>
                 <div class="text">GO BACK!!!</div> <br>
-                <a href="index.php" type="button" class="btn btn-outline-danger">BACK</a>
+                <a onclick="goBack()" type="button" class="btn btn-outline-danger">BACK</a>
             </div>
         </div>
     </div>
@@ -58,6 +58,10 @@ counter.forEach(counter => {
  }
  updateCount();
 });
+
+function goBack() {
+  window.history.back();
+}
 </script>
 
 </body>

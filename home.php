@@ -136,7 +136,7 @@ if($years==1)
         <img src="assets/logo.svg" alt="logo spint" id="logo">
       </div>
       <div class="text-center">
-        <a href="updatephoto.php"><img src="<?php echo $row['profile_picture'] ?>" alt="profile picture" class="rounded" id="foto"></a>
+        <a href="" data-toggle="modal" data-target="#addPhoto"><img src="<?php echo $row['profile_picture'] ?>" alt="profile picture" class="rounded" id="foto"></a>
         <p class="bg-dark"><?php echo $firstname ?></p>
       </div>
       <div class="list-group" id="sidebar">
@@ -155,6 +155,68 @@ if($years==1)
       </div>
     </div>
     <!-- End Left Sidebar -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="addPhoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Photo</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <form method="post" enctype="multipart/form-data">
+            <input type="file" name="image">
+            <?php
+                          include ('includes/database.php');
+                          
+                          if (!isset($_FILES['image']['tmp_name'])) {
+                          echo "";
+                          }else{
+                          $file=$_FILES['image']['tmp_name'];
+                          $image = $_FILES["image"] ["name"];
+                          $image_name= addslashes($_FILES['image']['name']);
+                          $size = $_FILES["image"] ["size"];
+                          $error = $_FILES["image"] ["error"];
+
+                          if ($error > 0){
+                                die("Error uploading file! Code $error.");
+                              }else{
+                                if($size > 10000000) //conditions for the file
+                                {
+                                die("Format is not allowed or file size is too big!");
+                                }
+                                
+                              else
+                                {
+
+                              move_uploaded_file($_FILES["image"]["tmp_name"],"upload/" . $_FILES["image"]["name"]);			
+                              $location="upload/" . $_FILES["image"]["name"];
+                              $user=$_SESSION['id'];
+                              $update=mysqli_query($con,"UPDATE user SET profile_picture = '$location' WHERE user_id='$user'");
+                              
+                              $update1=mysqli_query($con,"UPDATE comments SET image = '$location' WHERE user_id='$user'");
+
+                              }
+                                header('location:home.php');
+                              
+                              
+                              }
+                          }
+                        ?>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" name="image" >Save changes</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- Right Sidebar -->
     <div class="rounded text-left" id="right-sidebar-wrapper">

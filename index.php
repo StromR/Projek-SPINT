@@ -18,6 +18,20 @@
      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
      <link rel="icon" href="assets/logo.svg">
+    
+     <!-- Include the Dark theme sweetalert -->
+     <link href="vendor/dark/dark.scss" rel="stylesheet">
+
+     <script type="text/javascript">
+
+        function myFn(){
+            Swal.fire({
+                    icon: 'error',
+                    title: 'Email or Password',
+                    text: 'Does not match',
+                    });
+        }
+        </script>
      <title>Login</title>
 </head>
 <body class="main-bg">
@@ -34,7 +48,7 @@
                     <div class="user-box">
                         <input type="password" name="password" required="" placeholder="Password">
                     </div>
-                        <a><medium><input type="submit" name="submit" value="SIGN IN"/></medium></a>
+                        <a><medium><input type="submit" name="login" value="SIGN IN"/></medium></a>
                     <hr>
                     <p class="text-whitesmoke text-center"><small>Do not have an account?
                     <a class="text-whitesmoke" href="signup.php"><medium>Sign Up</medium></a></small></p>
@@ -43,9 +57,11 @@
             </div>
         </div>
 
+
+        <!-- Proses Login -->
         <?php
         include('includes/database.php');
-            if(isset($_POST['submit']))
+            if(isset($_POST['login']))
             {
                     $email=$_POST['email'];
                     $password=$_POST['password'];
@@ -56,10 +72,8 @@
                         $count = mysqli_num_rows($result);				
                             if ($count == 0) 
                                 {
-                                    echo '<script type="text/javascript">',
-                                    'sweetAlert() ', // Or Whatever
-                                    '</script>';
-                                                                } 
+                                    echo '<script>setTimeout(function(){ myFn(); }, 200);</script>'; 
+                                }
                             else if ($count > 0)
                                 {	
                                     if($row['email'] == "admin@spint.com" || $row['email'] == "admin2@spint.com")
@@ -78,15 +92,7 @@
                 }				
             }
         ?>
-        <script src="vendor/sweetalert2.all.min.js"></script>
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <script type="text/javascript">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-            function sweetAlert() 
-            {  
-            Swal.fire('Any fool can use a computer') 
-            }
-
-        </script>
 </body>
 </html>

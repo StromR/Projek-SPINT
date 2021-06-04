@@ -31,13 +31,13 @@
 							<div class="col-2">
 								<div class="input-group">
 									<label class="label">First Name</label>
-									<input class="input--style-4" type="text" name="firstname">
+									<input class="input--style-4" type="text" name="firstname" required>
 								</div>
 							</div>
 							<div class="col-2">
 								<div class="input-group">
 									<label class="label">Last Name</label>
-									<input class="input--style-4" type="text" name="lastname">
+									<input class="input--style-4" type="text" name="lastname" required>
 								</div>
 							</div>
 						</div>
@@ -45,13 +45,13 @@
 							<div class="col-2">
 								<div class="input-group">
 									<label class="label">Username</label>
-									<input class="input--style-4" type="text" name="username">
+									<input class="input--style-4" type="text" name="username" required>
 								</div>
 							</div>
 							<div class="col-2">
 								<div class="input-group">
 									<label class="label">Repeat Username</label>
-									<input class="input--style-4" type="text" name="username2">
+									<input class="input--style-4" type="text" name="username2" required>
 								</div>
 							</div>
 						</div>
@@ -101,11 +101,11 @@
 									<label class="label">Gender</label>
 									<div class="p-t-10">
 										<label class="radio-container m-r-45">Male
-											<input type="radio" checked="checked" name="gender">
+											<input type="radio" name="gender" required>
 											<span class="checkmark"></span>
 										</label>
 										<label class="radio-container">Female
-											<input type="radio" name="gender">
+											<input type="radio" name="gender" required>
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -116,13 +116,13 @@
 						<div class="col-2">
 								<div class="input-group">
 									<label class="label">Game</label>
-									<input class="input--style-4" type="text" name="username2">
+									<input class="input--style-4" type="text" name="game" required>
 								</div>
 							</div>
 							<div class="col-2">
 								<div class="input-group">
 									<label class="label">MMR</label>
-									<input class="input--style-4" type="text" name="mmr">
+									<input class="input--style-4" type="text" name="mmr" required>
 								</div>
 							</div>
 						</div>
@@ -130,13 +130,13 @@
 							<div class="col-2">
 								<div class="input-group">
 									<label class="label">Your email address</label>
-									<input class="input--style-4" type="text" name="firstname">
+									<input class="input--style-4" type="text" name="email" required>
 								</div>
 							</div>
 							<div class="col-2">
 								<div class="input-group">
 									<label class="label">Repeat email</label>
-									<input class="input--style-4" type="text" name="lastname">
+									<input class="input--style-4" type="text" name="email2" required>
 								</div>
 							</div>
 						</div>
@@ -144,13 +144,13 @@
 							<div class="col-2">
 								<div class="input-group">
 									<label class="label">Password</label>
-									<input class="input--style-4" type="text" name="username">
+									<input class="input--style-4" type="text" name="password" required>
 								</div>
 							</div>
 							<div class="col-2">
 								<div class="input-group">
 									<label class="label">Repeat Password</label>
-									<input class="input--style-4" type="text" name="username2">
+									<input class="input--style-4" type="text" name="password2" required>
 								</div>
 							</div>
 						</div>

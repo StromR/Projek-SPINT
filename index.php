@@ -27,7 +27,7 @@
             </div>
                 <p class="text-whitesmoke">  </p>
             <div class="login-box">
-                <form class="margin-t" method="post" action="signin_form.php" enctype="multipart/form-data">
+                <form class="margin-t" method="post" enctype="multipart/form-data">
                     <div class="user-box">
                         <input type="email" required="" name="email" placeholder="Your Email">
                     </div>
@@ -42,5 +42,51 @@
                 <p class="margin-t text-whitesmoke"><small> SPINT &copy; 2021</small> </p>
             </div>
         </div>
+
+        <?php
+        include('includes/database.php');
+            if(isset($_POST['submit']))
+            {
+                    $email=$_POST['email'];
+                    $password=$_POST['password'];
+                {
+                    $result = mysqli_query($con,"SELECT * FROM user WHERE email = '$email' and password='$password'");
+                                    
+                        $row = mysqli_fetch_array($result);
+                        $count = mysqli_num_rows($result);				
+                            if ($count == 0) 
+                                {
+                                    echo '<script type="text/javascript">',
+                                    'sweetAlert() ', // Or Whatever
+                                    '</script>';
+                                                                } 
+                            else if ($count > 0)
+                                {	
+                                    if($row['email'] == "admin@spint.com" || $row['email'] == "admin2@spint.com")
+                                    {	
+                                        session_start();
+                                        $_SESSION['id'] = $row['user_id'];
+                                        header("location:admin.php");
+                                    }
+                                    else 
+                                    {
+                                        session_start();
+                                        $_SESSION['id'] = $row['user_id'];
+                                        header("location:home.php");
+                                    }
+                                }
+                }				
+            }
+        ?>
+        <script src="vendor/sweetalert2.all.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script type="text/javascript">
+
+            function sweetAlert() 
+            {  
+            Swal.fire('Any fool can use a computer') 
+            }
+
+        </script>
 </body>
 </html>

@@ -12,7 +12,11 @@ include('includes/database.php');
 				$count = mysqli_num_rows($result);				
 					if ($count == 0) 
 						{
-							echo "<script>alert('Please check your username and password!'); window.location='index.php'</script>";
+							echo "<script>Swal.fire(
+								'Good job!',
+								'You clicked the button!',
+								'success'
+							  ); window.location='index.php'</script>";
 						} 
 					else if ($count > 0)
 						{	
